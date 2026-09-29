@@ -1,0 +1,65 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 260 38% 3%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 38% 3%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 38% 3%;
+    --primary: 274 100% 61%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 31% 94%;
+    --secondary-foreground: 260 38% 3%;
+    --muted: 45 31% 94%;
+    --muted-foreground: 267 8% 42%;
+    --accent: 274 100% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 4% 90%;
+    --input: 260 4% 90%;
+    --ring: 274 100% 61%;
+    --radius: 0.625rem;
+  }
+  .dark {
+    --background: 231 14% 10%;
+    --foreground: 210 20% 98%;
+    --card: 233 13% 14%;
+    --card-foreground: 210 20% 98%;
+    --popover: 231 14% 10%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 270 95% 75%;
+    --primary-foreground: 231 14% 10%;
+    --secondary: 235 11% 20%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 235 11% 20%;
+    --muted-foreground: 215 14% 65%;
+    --accent: 270 95% 75%;
+    --accent-foreground: 231 14% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 230 11% 20%;
+    --input: 230 11% 20%;
+    --ring: 270 95% 75%;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}

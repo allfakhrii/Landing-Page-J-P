@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JP &amp; PARTNERS | Business &amp; Management Consulting</title>
+  <meta name="description" content="JP & Partners hadir sebagai konsultan bisnis dan manajemen dengan pendekatan multidisiplin. From Insight to Sustainable Growth." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          },
+          colors: {
+            olive: {
+              50: '#F5F7F0',
+              100: '#E8EDE0',
+              200: '#D2DCBE',
+              300: '#B5C596',
+              400: '#8EA662',
+              500: '#647D32',
+              600: '#4F6526',
+              700: '#3D4E1E',
+              800: '#2F3C18',
+              900: '#232D12',
+              950: '#141A0A'
+            },
+            maroon: {
+              50: '#FDF3F4',
+              100: '#FBE8E9',
+              200: '#F5C6C9',
+              300: '#EC9AA1',
+              400: '#DE646F',
+              500: '#BE2838',
+              600: '#941B28',
+              700: '#6C111C',
+              800: '#4A0E17',
+              900: '#350910',
+              950: '#200408'
+            },
+            ivory: {
+              50: '#FDFCF9',
+              100: '#FAF7F0',
+              200: '#F3EDE0',
+              300: '#E7DCBF',
+              400: '#D6C49C'
+            },
+            charcoal: {
+              800: '#262A21',
+              900: '#1A1D16',
+              950: '#11130E'
+            }
+          },
+          boxShadow: {
+            'subtle': '0 4px 20px -2px rgba(47, 60, 24, 0.06)',
+            'elevated': '0 12px 36px -4px rgba(47, 60, 24, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & ReactDOM via CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone to compile JSX in-browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Custom utility styles */
+    body {
+      background-color: #FAF8F5;
+      color: #1A1D16;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: #3D4E1E;
+      color: #FFFFFF;
+    }
+
+    /* Focus visible ring */
+    *:focus-visible {
+      outline: 2px solid #3D4E1E;
+      outline-offset: 2px;
+    }
+
+    .editorial-border {
+      border-color: rgba(61, 78, 30, 0.15);
+    }
+
+    .badge-subtle {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-charcoal-900 antialiased overflow-x-hidden">
+  <div id="root"></div>
+
+  <!-- Main React Application Script -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    // --- DATA REPOSITORIES (From Official Presentation) ---
+
+    const NAV_LINKS = [
+      { name: "Tentang Kami", href: "#about" },
+      { name: "Layanan", href: "#services" },
+      { name: "Cara Kerja", href: "#how-we-work" },
+      { name: "Keunggulan", href: "#why-us" },
+      { name: "Tim Spesialis", href: "#team" },
+      { name: "Paket Investasi", href: "#pricing" },
+      { name: "Kontak", href: "#contact" },
+    ];
+
+    const SERVICES_DATA = [
+      {
+        id: "strategy",
+        title: "Business Strategy",
+        category: "Arah & Pertumbuhan",
+        desc: "Strategi bisnis, perencanaan korporat, transformasi, serta pengembangan arah pertumbuhan perusahaan yang terukur dan berdaya saing.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+          </svg>
+        ),
+        details: ["Business Model Review", "Market & Competitor Analysis", "Positioning & Value Proposition", "1-3 Year Strategic Roadmap"]
+      },
+      {
+        id: "operations",
+        title: "Operations & Process",
+        category: "Efisiensi & Produktivitas",
+        desc: "Manajemen operasional, standard operating procedure (SOP), efisiensi alur kerja, produktivitas, serta peningkatan kinerja operasional harian.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+          </svg>
+        ),
+        details: ["Penyusunan & Redesain SOP", "Workflow & Bottleneck Analysis", "Pengendalian Operasional", "Manpower & Productivity Audit"]
+      },
+      {
+        id: "people",
+        title: "People & Organization",
+        category: "Pengembangan SDM",
+        desc: "Human resources management, analisis jabatan, perancangan struktur organisasi, performance management, serta akselerasi kapabilitas tim.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+          </svg>
+        ),
+        details: ["Job Analysis & Job Description", "Sistem Evaluasi Kinerja (KPI)", "Struktur & Skala Upah", "Sistem Rekrutmen & Pengembangan"]
+      },
+      {
+        id: "marketing",
+        title: "Marketing & Growth",
+        category: "Pasar & Pertumbuhan",
+        desc: "Pengembangan brand, positioning strategis, perencanaan pemasaran terintegrasi, ekspansi pasar, serta strategi akuisisi pelanggan berkelanjutan.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+          </svg>
+        ),
+        details: ["STP & Customer Persona", "Channel & Content Strategy", "Marketing Funnel Optimization", "Campaign Framework & KPI"]
+      },
+      {
+        id: "finance",
+        title: "Finance & Performance",
+        category: "Kesehatan Keuangan",
+        desc: "Accounting, financial diagnostic, pengelolaan manajemen keuangan, budgeting, efisiensi biaya, serta peningkatan profitabilitas bisnis.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        ),
+        details: ["Review & Audit Laporan Keuangan", "Cash Flow & Working Capital", "Identifikasi Financial Leakage", "Setup Chart of Account & SOP"]
+      },
+      {
+        id: "tech",
+        title: "Technology & Digital",
+        category: "Sistem & Analitik",
+        desc: "Sistem informasi manajemen, adopsi teknologi tepat guna, transformasi digital, data analytics untuk pengambilan keputusan yang berbasis fakta.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+          </svg>
+        ),
+        details: ["Executive Dashboard Development", "Data Diagnostic & Business Metrics", "Integrasi POS, CRM, & Inventory", "Data-Driven Decision Framework"]
+      },
+      {
+        id: "leadership",
+        title: "Strategic Leadership",
+        category: "Penyatuan Lintas Fungsi",
+        desc: "Kemampuan lintas fungsi untuk menyatukan berbagai perspektif, menerjemahkan strategi menjadi tindakan, dan memastikan organisasi bergerak selaras.",
+        icon: (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.982-3.172M12 3a4.5 4.5 0 00-4.5 4.5c0 1.258.517 2.395 1.349 3.208a7.458 7.458 0 016.302 0A4.48 4.48 0 0016.5 7.5 4.5 4.5 0 0012 3z" />
+          </svg>
+        ),
+        details: ["Penyelarasan Visi & Eksekusi", "Konsensus Pemangku Kepentingan", "Change Management Terarah", "Monitoring Pencapaian Sasaran"]
+      }
+    ];
+
+    const HOW_WE_WORK_STEPS = [
+      {
+        step: "01",
+        title: "DISCOVER",
+        action: "Pahami Bisnis & Kondisi",
+        desc: "Mendalami kondisi bisnis secara utuh, kebutuhan aktual, serta tantangan operasional dan struktural yang sedang dihadapi perusahaan."
+      },
+      {
+        step: "02",
+        title: "DIAGNOSE",
+        action: "Identifikasi Akar Masalah",
+        desc: "Menganalisis data, proses, dan performa untuk menemukan akar persoalan utama serta peluang perbaikan yang berdampak tinggi."
+      },
+      {
+        step: "03",
+        title: "DESIGN",
+        action: "Susun Solusi Terintegrasi",
+        desc: "Merumuskan strategi, rekomendasi, dan cetak biru solusi komprehensif yang dirancang spesifik sesuai kapasitas dan kapabilitas perusahaan."
+      },
+      {
+        step: "04",
+        title: "DELIVER",
+        action: "Dampingi Penerapan Solusi",
+        desc: "Mendampingi implementasi di lapangan bersama tim internal manajemen guna memastikan eksekusi berjalan tepat sasaran."
+      },
+      {
+        step: "05",
+        title: "DEVELOP",
+        action: "Evaluasi & Keberlanjutan",
+        desc: "Melakukan peninjauan hasil secara berkala dan membangun kapabilitas mandiri agar perbaikan kinerja bertumbuh secara berkesinambungan."
+      }
+    ];
+
+    const TEAM_MEMBERS = [
+      {
+        name: "Joko Purwadi, S.S., M.M., CHRO",
+        role: "Operations Management and Strategic Leadership Specialist",
+        initials: "JP",
+        photo: "assets/team/joko.png",
+        bio: "Spesialis dalam perbaikan tata kelola operasional, penyelarasan kepemimpinan strategis, dan transformasi organisasi."
+      },
+      {
+        name: "Mandon Febriyanto, S.Ak., S.M., M.M., ACPA",
+        role: "Finance Management Specialist",
+        initials: "MF",
+        photo: "assets/team/mandon.png",
+        bio: "Ahli tata kelola akuntansi, mitigasi kebocoran keuangan, perencanaan anggaran, dan kesehatan arus kas bisnis."
+      },
+      {
+        name: "Sageri Fikri Ramadhan, S.Kom., M.M",
+        role: "Business Strategy Specialist",
+        initials: "SR",
+        photo: "assets/team/sageri.png",
+        bio: "Berfokus pada formulasi model bisnis, diferensiasi posisi pasar, serta perancangan peta jalan strategis jangka panjang."
+      },
+      {
+        name: "Azmi Rasyid, S.T., M.M",
+        role: "Marketing Management Specialist",
+        initials: "AR",
+        photo: "assets/team/azmi.png",
+        bio: "Berpengalaman dalam pengembangan strategi brand, akuisisi pelanggan, penetrasi pasar, dan optimasi marketing funnel."
+      },
+      {
+        name: "Seira Latanssa, S.Psi., M.M., QRMO",
+        role: "Human Resources Management Specialist",
+        initials: "SL",
+        photo: "assets/team/seira.png",
+        bio: "Fokus pada arsitektur organisasi, penilaian kompetensi, manajemen risiko sumber daya manusia, dan budaya kerja."
+      },
+      {
+        name: "Fatih Al-Fakhri Muhammad",
+        role: "Data Analyst & IT Specialist",
+        initials: "FA",
+        photo: "assets/team/fatih.png",
+        bio: "Mengembangkan dashboard analitik bisnis, pemodelan data terstruktur, serta digitalisasi proses pengambilan keputusan."
+      }
+    ];
+
+    const PRICING_DATA = [
+      {
+        areaKey: "flagship",
+        areaName: "Paket Transformasi Utama",
+        badge: "Solusi Komprehensif Terpadu",
+        title: "Business Transformation Package",
+        price: "Rp50 - 100 Juta",
+        scope: "Untuk perusahaan yang sudah berjalan tetapi sistem bisnis dan operasionalnya belum tertata rapi.",
+        features: [
+          "Strategy: Business Diagnostic & Strategic Direction",
+          "Finance: Financial Health, Budgeting, & Cashflow",
+          "HR: Organization Structure, Job Descriptions, KPI, & HR System",
+          "Marketing: Market Analysis, Positioning, & Marketing Strategy",
+          "Operations: Penyusunan SOP, Workflow, & Operational Improvement",
+          "IT & Data: Executive Management Dashboard & Business Reporting",
+          "Output Akhir: Business Transformation Blueprint plus Implementation Roadmap"
+        ],
+        highlight: true
+      },
+      {
+        areaKey: "finance",
+        areaName: "Practice Area 01: Finance",
+        badge: "Kesehatan Finansial",
+        title: "Financial Check-up",
+        price: "Rp3 - 7,5 Juta",
+        scope: "Audit mendalam kesehatan finansial untuk menemukan efisiensi dan potensi kebocoran.",
+        features: [
+          "Review menyeluruh Laporan Keuangan",
+          "Analisis Revenue, Margin, dan Struktur Biaya",
+          "Evaluasi Cash Flow, Break-Even, dan Modal Kerja (Working Capital)",
+          "Identifikasi Titik Kebocoran Finansial (Financial Leakage)",
+          "Output: Laporan Kesehatan Keuangan Lengkap + Rekomendasi Manajemen"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "finance",
+        areaName: "Practice Area 01: Finance",
+        badge: "Pondasi Akuntansi",
+        title: "Financial System Setup",
+        price: "Rp7,5 - 15 Juta",
+        scope: "Pembangunan standarisasi sistem pencatatan dan tata kelola transaksi keuangan perusahaan.",
+        features: [
+          "Perancangan Chart of Accounts (CoA) terstandarisasi",
+          "Struktur Pencatatan dan Sistem Pengarsipan Transaksi",
+          "SOP Transaksi Keuangan, Petty Cash, dan Otorisasi Approval",
+          "Alur Pembayaran dan Pengadaan (Purchasing/Payment Flow)",
+          "Setup Cash Management, Budgeting, dan Format Pelaporan Rutin"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "strategy",
+        areaName: "Practice Area 02: Business Strategy",
+        badge: "Diagnosis Strategis",
+        title: "Business Health Check",
+        price: "Rp5 - 10 Juta",
+        scope: "Evaluasi komprehensif kesehatan bisnis, kesiapan pasar, dan keunggulan kompetitif.",
+        features: [
+          "Analisis Business Model dan Struktur Operasional Saat Ini",
+          "Analisis Pasar, Pesaing Utama, dan Positioning Brand",
+          "Evaluasi Arus Pendapatan (Revenue Streams) dan Biaya",
+          "Analisis SWOT Mendalam dan Isu-Isu Strategis Perusahaan",
+          "Output: Laporan Diagnostik Bisnis Terstruktur untuk Pengambilan Keputusan"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "strategy",
+        areaName: "Practice Area 02: Business Strategy",
+        badge: "Peta Jalan Bisnis",
+        title: "Business Strategy Development",
+        price: "Rp15 - 30 Juta",
+        scope: "Formulasi strategi pertumbuhan terarah untuk memenangkan persaingan pasar.",
+        features: [
+          "Review & Rekonfigurasi Model Bisnis Perusahaan",
+          "Penyusunan Value Proposition dan Positioning Terinci",
+          "Perumusan Strategic Objectives dan Rencana Inisiatif Kunci",
+          "Penetapan Key Performance Indicators (KPI) Korporat",
+          "Penyusunan Roadmap Eksekusi Strategis 1-3 Tahun"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "hr",
+        areaName: "Practice Area 03: Human Resources",
+        badge: "Audit Organisasi",
+        title: "HR Audit",
+        price: "Rp5 - 10 Juta",
+        scope: "Peninjauan efektivitas struktur organisasi, kejelasan tugas, dan kepatuhan kebijakan SDM.",
+        features: [
+          "Evaluasi Struktur Organisasi dan Beban Kerja",
+          "Review Uraian Tugas (Job Description) Karyawan",
+          "Peninjauan Proses Rekrutmen, Kompensasi, dan Kehadiran",
+          "Evaluasi Manajemen Kinerja dan Administrasi Personalia",
+          "Audit Kebijakan Perusahaan dan Rencana Pengembangan Karyawan"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "hr",
+        areaName: "Practice Area 03: Human Resources",
+        badge: "Sistem Manajemen SDM",
+        title: "HR System Development",
+        price: "Rp15 - 30 Juta",
+        scope: "Penyusunan fondasi sistem pengelolaan sumber daya manusia yang teratur dan terukur.",
+        features: [
+          "Penyusunan Struktur Organisasi, Job Analysis, dan Spesifikasi Jabatan",
+          "Penyusunan SOP Human Resources Terintegrasi",
+          "Perancangan Alur Rekrutmen dan Standar Penilaian",
+          "Penyusunan Sistem Performance Management dan KPI Karyawan",
+          "Penyusunan Framework Pelatihan dan Kerangka Administrasi SDM"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "marketing",
+        areaName: "Practice Area 04: Marketing Management",
+        badge: "Audit Pemasaran",
+        title: "Marketing Audit",
+        price: "Rp5 - 10 Juta",
+        scope: "Peninjauan performa branding, saluran pemasaran, dan efektivitas konversi pasar.",
+        features: [
+          "Review Persepsi Brand dan Target Pasar Saat Ini",
+          "Analisis Perilaku Konsumen dan Pemetaan Kompetitor",
+          "Audit Saluran Media Sosial dan Efektivitas Marketing Funnel",
+          "Evaluasi Penetapan Harga (Pricing) dan Customer Journey",
+          "Rekomendasi Optimalisasi Penetrasi Pasar"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "marketing",
+        areaName: "Practice Area 04: Marketing Management",
+        badge: "Strategi Pertumbuhan",
+        title: "Marketing Strategy",
+        price: "Rp10 - 25 Juta",
+        scope: "Perancangan strategi pemasaran komprehensif untuk ekspansi dan pertumbuhan omset.",
+        features: [
+          "Formulasi STP (Segmenting, Targeting, Positioning)",
+          "Penyusunan Profil Persona Pelanggan Ideal",
+          "Rencana Strategi Konten dan Pemilihan Saluran Pemasaran Tepat",
+          "Penyusunan Kerangka Kampanye Pemasaran (Campaign Framework)",
+          "Penetapan Metrik dan KPI Keberhasilan Pemasaran"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "data",
+        areaName: "Practice Area 05: Data Analytics & IT",
+        badge: "Diagnostik Data",
+        title: "Data & Business Diagnostic",
+        price: "Rp5 - 10 Juta",
+        scope: "Penilaian kesiapan data perusahaan untuk menghasilkan wawasan bisnis yang akurat.",
+        features: [
+          "Pemeriksaan Kualitas dan Kerapian Data Bisnis",
+          "Proses Pembersihan dan Standarisasi Struktur Data",
+          "Perumusan Metrik Kunci dan Key Performance Indicators (KPI)",
+          "Pembangunan Purwarupa Dashboard Bisnis Sederhana",
+          "Analisis Dasar dan Rekomendasi Wawasan Berbasis Data"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "data",
+        areaName: "Practice Area 05: Data Analytics & IT",
+        badge: "Visualisasi Metrik",
+        title: "Dashboard Development",
+        price: "Rp7,5 - 20 Juta",
+        scope: "Pembuatan dasbor visual interaktif untuk memantau performa bisnis secara waktu-nyata.",
+        features: [
+          "Pilihan Dasbor: Penjualan, Keuangan, SDM, atau Inventori",
+          "Dasbor Eksekutif Terpadu untuk Manajemen Puncak",
+          "Visualisasi Tren dan Metrik Penting Perusahaan",
+          "Pelatihan Singkat Pengoperasian dan Pembaruan Data",
+          "Investasi disesuaikan dengan tingkat kompleksitas dan platform pilihan"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "operations",
+        areaName: "Practice Area 06: Operations & Leadership",
+        badge: "Audit Alur Operasi",
+        title: "Operational Audit",
+        price: "Rp5 - 10 Juta",
+        scope: "Pemeriksaan efisiensi alur operasional untuk memangkas pemborosan waktu dan biaya.",
+        features: [
+          "Pemetaan Alur Proses Bisnis Saat Ini",
+          "Identifikasi Titik Hambatan (Bottleneck) dan Pemborosan",
+          "Evaluasi Beban Kerja Tenaga Kerja (Manpower)",
+          "Peninjauan Kelengkapan SOP Operasional",
+          "Rekomendasi Peningkatan Produktivitas dan Sistem Kontrol"
+        ],
+        highlight: false
+      },
+      {
+        areaKey: "operations",
+        areaName: "Practice Area 06: Operations & Leadership",
+        badge: "Standarisasi SOP",
+        title: "SOP & Business Process Development",
+        price: "Rp10 - 25 Juta",
+        scope: "Dokumentasi dan standardisasi alur kerja perusahaan agar operasional berjalan konsisten.",
+        features: [
+          "Paket 5 SOP Operasional Inti: Rp10 Juta",
+          "Paket 10 SOP Operasional Lengkap: Rp15 Juta",
+          "Paket 20 SOP Operasional Korporat: Rp25 Juta",
+          "Dilengkapi Formulir Kerja dan Alur Otorisasi",
+          "Panduan Sosialisasi dan Implementasi kepada Tim Terkait"
+        ],
+        highlight: false
+      }
+    ];
+
+    // --- MAIN COMPONENT ---
+    function App() {
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [scrolled, setScrolled] = useState(false);
+      const [selectedPricingCategory, setSelectedPricingCategory] = useState("all");
+      
+      // Form State
+      const [formData, setFormData] = useState({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: ""
+      });
+      const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
+      const [formErrorMsg, setFormErrorMsg] = useState("");
+
+      // Track scroll for navbar transparency
+      useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 20) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      // Close mobile menu on Escape key
+      useEffect(() => {
+        const handleKeyDown = (e) => {
+          if (e.key === "Escape" && mobileMenuOpen) {
+            setMobileMenuOpen(false);
+          }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+      }, [mobileMenuOpen]);
+
+      // Filtered Pricing Packages
+      const filteredPackages = useMemo(() => {
+        if (selectedPricingCategory === "all") return PRICING_DATA;
+        return PRICING_DATA.filter(pkg => pkg.areaKey === selectedPricingCategory);
+      }, [selectedPricingCategory]);
+
+      // Handle package selection to scroll to contact form
+      const handleSelectPackage = (pkgTitle) => {
+        setFormData(prev => ({ ...prev, service: pkgTitle }));
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // Form input handler
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+      };
+
+      // Form submission handler
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        // Basic validation
+        if (!formData.name.trim()) {
+          setFormErrorMsg("Mohon masukkan nama lengkap Anda.");
+          setFormStatus("error");
+          return;
+        }
+        if (!formData.email.trim() || !formData.email.includes("@")) {
+          setFormErrorMsg("Mohon masukkan alamat email yang valid.");
+          setFormStatus("error");
+          return;
+        }
+        if (!formData.phone.trim()) {
+          setFormErrorMsg("Mohon masukkan nomor WhatsApp atau telepon Anda.");
+          setFormStatus("error");
+          return;
+        }
+        if (!formData.message.trim()) {
+          setFormErrorMsg("Mohon ceritakan sedikit tentang kebutuhan atau tantangan bisnis Anda.");
+          setFormStatus("error");
+          return;
+        }
+
+        setFormErrorMsg("");
+        setFormStatus("sending");
+
+        // Simulate fast verified dispatch
+        setTimeout(() => {
+          setFormStatus("success");
+        }, 800);
+      };
+
+      // Generate direct WhatsApp link
+      const getWhatsAppLink = () => {
+        const phone = "6281919011011";
+        const text = encodeURIComponent(
+          `Halo JP & Partners, perkenalkan saya ${formData.name || "[Nama]"}${formData.company ? ` dari ${formData.company}` : ""}. Saya ingin berdiskusi mengenai layanan ${formData.service || "Konsultasi Bisnis"}.\n\nCatatan kebutuhan: ${formData.message || "-"}`
+        );
+        return `https://wa.me/${phone}?text=${text}`;
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col selection:bg-olive-700 selection:text-white">
+          
+          {/* DYNAMIC ISLAND BACKDROP (Active only on mobile when expanded) */}
+          {mobileMenuOpen && (
+            <div 
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-charcoal-950/60 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden"
+              aria-hidden="true"
+            />
+          )}
+
+          {/* DYNAMIC ISLAND FIXED HEADER */}
+          <header className="fixed top-3 sm:top-5 inset-x-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
+            <div
+              className={`pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] bg-[#141710]/95 backdrop-blur-xl border text-white ${
+                mobileMenuOpen
+                  ? 'w-full max-w-lg rounded-[28px] p-5 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6)] border-white/20'
+                  : scrolled
+                    ? 'w-full max-w-5xl rounded-full py-2 px-3.5 sm:px-5 shadow-elevated border-white/20'
+                    : 'w-full max-w-5xl rounded-full py-2.5 px-4 sm:px-6 border-white/15 shadow-2xl'
+              }`}
+            >
+              {/* COMPACT VIEW (Visible when closed on mobile, or always on desktop) */}
+              {!mobileMenuOpen ? (
+                <div className="flex items-center justify-between w-full">
+                  
+                  {/* BRAND EMBLEM & NAME */}
+                  <a 
+                    href="#" 
+                    className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive-400 rounded-full px-1"
+                  >
+                    <img 
+                      src="assets/logo_emblem.png" 
+                      alt="JP & PARTNERS Emblem" 
+                      className="h-6 sm:h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div style={{ display: 'none' }} className="w-6 h-6 rounded-full bg-olive-700 text-white font-serif font-bold text-xs flex items-center justify-center">
+                      JP
+                    </div>
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="font-serif font-bold text-sm sm:text-base tracking-wider text-white">JP &amp; PARTNERS</span>
+                      <span className="hidden xl:inline text-[10px] tracking-widest text-olive-300 uppercase font-medium">Consulting</span>
+                    </div>
+                  </a>
+
+                  {/* DESKTOP CAPSULE NAVIGATION LINKS */}
+                  <nav className="hidden lg:flex items-center gap-1 bg-white/5 rounded-full px-2 py-1 border border-white/5">
+                    {NAV_LINKS.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        className="text-xs tracking-wide font-medium text-stone-300 hover:text-white hover:bg-white/10 px-3 py-1.5 rounded-full transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive-400"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </nav>
+
+                  {/* RIGHT CONTROLS */}
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    {/* Location Badge (Desktop) */}
+                    <div className="hidden md:flex items-center gap-1.5 text-[11px] text-stone-300 bg-white/5 px-2.5 py-1 rounded-full border border-white/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-olive-400"></span>
+                      <span>Purwokerto</span>
+                    </div>
+
+                    {/* CTA Button (Desktop) */}
+                    <a
+                      href="#contact"
+                      className="hidden sm:inline-flex items-center justify-center px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold text-white bg-maroon-800 hover:bg-maroon-700 active:bg-maroon-900 shadow-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maroon-500"
+                    >
+                      Mulai Konsultasi
+                    </a>
+
+                    {/* Mobile Dynamic Island Trigger Button */}
+                    <button
+                      type="button"
+                      onClick={() => setMobileMenuOpen(true)}
+                      className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/15 text-stone-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive-400 transition-colors text-xs font-medium"
+                      aria-expanded={false}
+                      aria-label="Buka menu navigasi Dynamic Island"
+                    >
+                      <span>Menu</span>
+                      <div className="w-4 h-4 flex flex-col justify-center items-center gap-1">
+                        <span className="w-3.5 h-0.5 bg-white rounded-full"></span>
+                        <span className="w-3.5 h-0.5 bg-white rounded-full"></span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                /* EXPANDED VIEW (Dynamic Island Morph on Mobile) */
+                <div className="space-y-4">
+                  {/* Top Bar inside Island */}
+                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                    <div className="flex items-center gap-2.5">
+                      <img 
+                        src="assets/logo_emblem.png" 
+                        alt="JP & PARTNERS Emblem" 
+                        className="h-7 w-auto object-contain"
+                      />
+                      <div>
+                        <span className="font-serif font-bold text-base tracking-wider text-white block leading-tight">JP &amp; PARTNERS</span>
+                        <span className="text-[10px] tracking-widest text-olive-300 uppercase font-medium block">Business &amp; Management Consulting</span>
+                      </div>
+                    </div>
+                    
+                    {/* Close / Collapse Button */}
+                    <button
+                      type="button"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-stone-200 hover:text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive-400 transition-colors"
+                      aria-expanded={true}
+                      aria-label="Tutup menu navigasi Dynamic Island"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Navigation Links Grid (Touch targets >= 44px) */}
+                  <div className="grid grid-cols-2 gap-2">
+                    {NAV_LINKS.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-2 px-3.5 py-3 rounded-xl bg-white/5 hover:bg-white/15 text-stone-200 hover:text-white text-xs font-medium transition-colors"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-olive-400"></span>
+                        <span>{link.name}</span>
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* Quick Contacts & Primary Action */}
+                  <div className="pt-2 border-t border-white/10 space-y-2.5">
+                    <div className="flex items-center justify-between text-[11px] text-stone-300 px-1">
+                      <a href="tel:081919011011" className="hover:text-olive-300 transition-colors flex items-center gap-1.5">
+                        <svg className="w-3.5 h-3.5 text-olive-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        08 1919 011011
+                      </a>
+                      <span className="text-white/20">•</span>
+                      <span className="text-stone-400">Purwokerto, Jawa Tengah</span>
+                    </div>
+
+                    <a
+                      href="#contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full flex items-center justify-center px-4 py-3 rounded-xl text-sm font-bold text-white bg-maroon-800 hover:bg-maroon-700 active:bg-maroon-900 transition-colors shadow-sm"
+                    >
+                      Mulai Konsultasi
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          </header>
+
+          {/* HERO SECTION */}
+          <section className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-32 pb-20 lg:pb-28 border-b border-stone-200">
+            {/* Subtle aesthetic circles in background inspired by slide deck */}
+            <div className="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-maroon-800/5 pointer-events-none blur-2xl"></div>
+            <div className="absolute top-1/2 -left-20 w-72 h-72 rounded-full bg-olive-500/5 pointer-events-none blur-2xl"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                {/* Left Column: Headlines & Positioning */}
+                <div className="lg:col-span-7 space-y-6 text-left">
+                  
+                  {/* Category Pill / Kicker */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-stone-100 border border-stone-300/80 text-stone-800 text-xs font-semibold tracking-wider uppercase">
+                    <span className="w-2 h-2 rounded-full bg-maroon-800"></span>
+                    BUSINESS &amp; MANAGEMENT CONSULTING
+                  </div>
+
+                  {/* Main Headline */}
+                  <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 tracking-tight leading-[1.15]">
+                    FROM INSIGHT TO <span className="text-olive-700 underline decoration-olive-300 decoration-4 underline-offset-6">SUSTAINABLE</span> GROWTH
+                  </h1>
+
+                  {/* Sub-headline */}
+                  <p className="text-xl sm:text-2xl font-medium text-maroon-800 leading-snug">
+                    Mengubah Tantangan Bisnis Menjadi Peluang untuk Bertumbuh
+                  </p>
+
+                  {/* Narrative paragraph */}
+                  <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-2xl">
+                    JP &amp; Partners hadir sebagai konsultan bisnis dan manajemen dengan pendekatan multidisiplin. Kami menyatukan keahlian strategi, keuangan, SDM, operasional, pemasaran, dan analitik data untuk menghasilkan solusi terukur yang dapat langsung diterapkan.
+                  </p>
+
+                  {/* Actions */}
+                  <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a
+                      href="#services"
+                      className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg text-base font-bold text-white bg-maroon-800 hover:bg-maroon-900 active:bg-maroon-950 shadow-md transition-all duration-150 focus:ring-2 focus:ring-offset-2 focus:ring-maroon-800 group"
+                    >
+                      <span>START HERE</span>
+                      <svg className="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="#pricing"
+                      className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-semibold text-olive-800 bg-olive-50 hover:bg-olive-100 border border-olive-200 transition-colors"
+                    >
+                      Lihat Paket Layanan
+                    </a>
+                  </div>
+
+                  {/* Credibility highlights */}
+                  <div className="pt-6 grid grid-cols-3 gap-2 sm:gap-4 border-t border-stone-200 max-w-lg">
+                    <div>
+                      <span className="block text-xl sm:text-2xl font-extrabold text-charcoal-900 font-serif">8</span>
+                      <span className="text-[11px] sm:text-xs text-stone-600 font-medium leading-tight block">Keahlian Terpadu</span>
+                    </div>
+                    <div>
+                      <span className="block text-xl sm:text-2xl font-extrabold text-charcoal-900 font-serif">6</span>
+                      <span className="text-[11px] sm:text-xs text-stone-600 font-medium leading-tight block">Spesialis Senior</span>
+                    </div>
+                    <div>
+                      <span className="block text-xl sm:text-2xl font-extrabold text-charcoal-900 font-serif">5 Langkah</span>
+                      <span className="text-[11px] sm:text-xs text-stone-600 font-medium leading-tight block">Metodologi Kerja</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column: Visual Composition with Presentation Motif */}
+                <div className="lg:col-span-5 relative flex justify-center">
+                  <div className="relative w-full max-w-md">
+                    
+                    {/* Decorative geometric elements matching slide 1 & 2 */}
+                    <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-maroon-800 z-0"></div>
+                    <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-olive-700 z-0 opacity-90"></div>
+
+                    {/* Main Featured Card */}
+                    <div className="relative z-10 bg-white rounded-2xl p-6 sm:p-8 shadow-elevated border border-stone-200">
+                      <div className="flex items-center justify-between border-b border-stone-100 pb-4 mb-5">
+                        <span className="text-xs font-bold text-olive-800 tracking-wider uppercase">JP &amp; Partners Approach</span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80">
+                          <div className="flex items-center gap-3 mb-1">
+                            <span className="w-6 h-6 rounded-full bg-maroon-800 text-white text-xs font-bold flex items-center justify-center">1</span>
+                            <h2 className="text-sm font-bold text-charcoal-900">Insight</h2>
+                          </div>
+                          <p className="text-xs text-stone-600 pl-9">
+                            Memahami bisnis, tantangan, dan peluang sebelum menentukan solusi.
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80">
+                          <div className="flex items-center gap-3 mb-1">
+                            <span className="w-6 h-6 rounded-full bg-maroon-800 text-white text-xs font-bold flex items-center justify-center">2</span>
+                            <h2 className="text-sm font-bold text-charcoal-900">Integration</h2>
+                          </div>
+                          <p className="text-xs text-stone-600 pl-9">
+                            Menggabungkan berbagai perspektif dan keahlian untuk melihat persoalan secara utuh.
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80">
+                          <div className="flex items-center gap-3 mb-1">
+                            <span className="w-6 h-6 rounded-full bg-olive-700 text-white text-xs font-bold flex items-center justify-center">3</span>
+                            <h2 className="text-sm font-bold text-charcoal-900">Impact</h2>
+                          </div>
+                          <p className="text-xs text-stone-600 pl-9">
+                            Mengubah strategi menjadi tindakan yang memberikan hasil nyata dan berkelanjutan.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500">
+                        <span>Solusi relevan &amp; terapan</span>
+                        <span className="font-semibold text-olive-800">Tersedia konsultasi awal</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* ABOUT US SECTION */}
+          <section id="about" className="py-20 lg:py-28 bg-white border-b border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span className="text-xs font-bold text-maroon-800 tracking-widest uppercase block">
+                  WELCOME TO OUR COMPANY
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                  Konsultan Bisnis &amp; Manajemen dengan Pendekatan Multidisiplin
+                </h2>
+                <div className="w-16 h-1 bg-olive-700 mx-auto mt-2"></div>
+                <p className="text-lg text-stone-600 pt-2 leading-relaxed">
+                  JP &amp; Partners hadir sebagai mitra strategis perusahaan dalam menghadapi dinamika pasar yang terus berubah.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                {/* Narrative text card */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div className="bg-[#FAF8F5] p-8 rounded-2xl border border-stone-200 space-y-5">
+                    <p className="text-stone-700 leading-relaxed text-base sm:text-lg">
+                      Kami menggabungkan keahlian di bidang <strong className="text-charcoal-900">Business Strategy, Marketing, Operations, People, Finance, Technology, Big Data,</strong> dan <strong className="text-charcoal-900">Digital Business</strong> untuk membantu perusahaan memahami persoalan, menemukan peluang, dan mengambil keputusan yang lebih tepat.
+                    </p>
+                    <p className="text-stone-700 leading-relaxed text-base sm:text-lg">
+                      Karena kami percaya, persoalan bisnis yang kompleks membutuhkan <strong className="text-maroon-800">lebih dari satu sudut pandang</strong>. Solusi yang hanya berfokus pada satu aspek tanpa mempertimbangkan aspek lainnya seringkali menciptakan hambatan baru di bagian lain.
+                    </p>
+                    <div className="pt-3 flex items-center gap-3 text-sm font-semibold text-olive-800">
+                      <svg className="w-5 h-5 text-olive-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Solusi komprehensif, bukan sekadar teori di atas kertas.</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3 Pillars of Approach */}
+                <div className="lg:col-span-5 space-y-4">
+                  <h3 className="font-serif text-xl font-bold text-charcoal-900 mb-4 flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-maroon-800"></span>
+                    Tiga Pilar Pendekatan Kami
+                  </h3>
+
+                  <div className="p-5 rounded-xl bg-white border-2 border-stone-200 hover:border-olive-600 transition-colors shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-olive-800">Pilar 01</span>
+                    <h4 className="text-lg font-bold text-charcoal-900 mt-1 mb-1.5">Insight</h4>
+                    <p className="text-sm text-stone-600">
+                      Memahami bisnis, dinamika industri, tantangan internal, dan peluang riil sebelum menentukan solusi apa pun.
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-xl bg-white border-2 border-stone-200 hover:border-olive-600 transition-colors shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-maroon-800">Pilar 02</span>
+                    <h4 className="text-lg font-bold text-charcoal-900 mt-1 mb-1.5">Integration</h4>
+                    <p className="text-sm text-stone-600">
+                      Menggabungkan berbagai perspektif dan keahlian disiplin ilmu untuk melihat persoalan organisasi secara utuh.
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-xl bg-white border-2 border-stone-200 hover:border-olive-600 transition-colors shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-stone-800">Pilar 03</span>
+                    <h4 className="text-lg font-bold text-charcoal-900 mt-1 mb-1.5">Impact</h4>
+                    <p className="text-sm text-stone-600">
+                      Mengubah strategi konseptual menjadi tindakan taktis yang memberikan hasil nyata dan berkelanjutan bagi perusahaan.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* WHAT WE DO / SERVICES SECTION */}
+          <section id="services" className="py-20 lg:py-28 bg-[#FAF8F5] border-b border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="max-w-3xl mb-16 text-left">
+                <span className="text-xs font-bold text-olive-800 tracking-widest uppercase block mb-2">
+                  WHAT WE DO &bull; OUR SERVICES
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                  Multidisciplinary Expertise. One Integrated Perspective.
+                </h2>
+                <p className="text-stone-600 text-base sm:text-lg mt-3 leading-relaxed">
+                  Setiap perusahaan memiliki kondisi dan tantangan yang berbeda. Karena itu, kami tidak menggunakan satu solusi untuk semua, melainkan menghadirkan keahlian yang disesuaikan dengan kebutuhan nyata bisnis Anda.
+                </p>
+              </div>
+
+              {/* Grid of 7 core capabilities */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                {SERVICES_DATA.map((service, index) => (
+                  <div
+                    key={service.id}
+                    className="bg-white rounded-2xl p-7 border border-stone-200 shadow-subtle hover:shadow-elevated hover:border-olive-600 transition-all duration-200 flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-5">
+                        <div className="w-12 h-12 rounded-xl bg-olive-50 text-olive-800 flex items-center justify-center group-hover:bg-olive-700 group-hover:text-white transition-colors duration-200">
+                          {service.icon}
+                        </div>
+                        <span className="text-xs font-semibold px-2.5 py-1 rounded bg-stone-100 text-stone-700">
+                          {service.category}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-charcoal-900 mb-2.5">
+                        {service.title}
+                      </h3>
+
+                      <p className="text-sm text-stone-600 leading-relaxed mb-6">
+                        {service.desc}
+                      </p>
+
+                      <div className="border-t border-stone-100 pt-4 mb-6">
+                        <span className="text-xs font-bold text-stone-500 uppercase tracking-wider block mb-2.5">
+                          Cakupan Solusi:
+                        </span>
+                        <ul className="space-y-1.5">
+                          {service.details.map((item, idx) => (
+                            <li key={idx} className="text-xs text-stone-700 flex items-start gap-2">
+                              <span className="text-olive-700 font-bold">&bull;</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => handleSelectPackage(`Layanan: ${service.title}`)}
+                      className="w-full py-2.5 px-4 rounded-lg text-xs font-bold text-olive-800 bg-olive-50 hover:bg-olive-700 hover:text-white border border-olive-200 transition-all duration-150 flex items-center justify-center gap-1.5 focus:ring-2 focus:ring-olive-700"
+                    >
+                      <span>Konsultasikan Kebutuhan Ini</span>
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                ))}
+
+                {/* Additional Flagship Card */}
+                <div className="bg-charcoal-900 text-white rounded-2xl p-7 border border-charcoal-800 shadow-elevated flex flex-col justify-between md:col-span-2 lg:col-span-2 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-maroon-800 text-white text-xs font-bold tracking-wider uppercase mb-4">
+                      Program Unggulan
+                    </div>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-3">
+                      Business Transformation Program
+                    </h3>
+                    <p className="text-stone-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+                      Pendampingan restrukturisasi dan penataan sistem menyeluruh bagi perusahaan yang ingin bertransformasi, ekspansi, atau memperbaiki efisiensi seluruh rantai nilai bisnis secara terpadu.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-200 mb-6">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-olive-400"></span>
+                        <span>Multi-Spesialis Terintegrasi Sekaligus</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-olive-400"></span>
+                        <span>Blueprint Transformasi &amp; Roadmap</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-olive-400"></span>
+                        <span>Pendampingan Eksekusi Lapangan</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-olive-400"></span>
+                        <span>Setup Dasbor Pemantauan KPI</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 pt-4 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span className="text-xs text-stone-400">Investasi bertahap disesuaikan skala &amp; kompleksitas data.</span>
+                    <button
+                      type="button"
+                      onClick={() => handleSelectPackage("Business Transformation Package")}
+                      className="w-full sm:w-auto px-6 py-3 rounded-lg text-sm font-bold text-white bg-olive-700 hover:bg-olive-600 transition-colors shadow-md"
+                    >
+                      Pelajari &amp; Konsultasikan
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* HOW WE WORK SECTION */}
+          <section id="how-we-work" className="py-20 lg:py-28 bg-white border-b border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span className="text-xs font-bold text-maroon-800 tracking-widest uppercase block">
+                  HOW WE WORK &bull; ALUR KERJA
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                  Metodologi Terstruktur Berorientasi Hasil
+                </h2>
+                <div className="w-16 h-1 bg-maroon-800 mx-auto mt-2"></div>
+                <p className="text-lg text-stone-600 pt-2 leading-relaxed">
+                  Kami memastikan setiap langkah pendampingan memiliki kejelasan tujuan, keluaran yang terukur, dan berdampak langsung pada kinerja perusahaan.
+                </p>
+              </div>
+
+              {/* 5-Step Process Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                {HOW_WE_WORK_STEPS.map((stepItem, idx) => (
+                  <div
+                    key={stepItem.step}
+                    className="bg-[#FAF8F5] rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between hover:border-olive-700 hover:shadow-md transition-all duration-200 relative group"
+                  >
+                    <div>
+                      {/* Step Number Badge */}
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="font-serif text-2xl font-black text-maroon-800 tracking-wider">
+                          {stepItem.step}
+                        </span>
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-stone-600 px-2 py-0.5 rounded bg-white border border-stone-200">
+                          Tahap {idx + 1}
+                        </span>
+                      </div>
+
+                      <h3 className="font-serif text-lg font-bold text-charcoal-900 mb-1">
+                        {stepItem.title}
+                      </h3>
+
+                      <h4 className="text-xs font-semibold text-olive-800 mb-3">
+                        {stepItem.action}
+                      </h4>
+
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        {stepItem.desc}
+                      </p>
+                    </div>
+
+                    <div className="mt-6 pt-3 border-t border-stone-200 text-[11px] text-stone-500 font-medium">
+                      Fokus: Ketepatan &amp; Relevansi
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </section>
+
+          {/* WHY JP & PARTNERS SECTION */}
+          <section id="why-us" className="py-20 lg:py-28 bg-[#FAF8F5] border-b border-stone-200 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                {/* Left side: narrative */}
+                <div className="lg:col-span-6 space-y-6 text-left">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-stone-100 border border-stone-300 text-stone-800 text-xs font-bold tracking-wider uppercase">
+                    WHY JP &amp; PARTNERS?
+                  </div>
+
+                  <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight leading-tight">
+                    One Business. <br />
+                    <span className="text-olive-700">Multiple Perspectives.</span>
+                  </h2>
+
+                  <p className="text-base sm:text-lg text-stone-700 leading-relaxed">
+                    Kami memahami bahwa satu persoalan bisnis sering kali memiliki banyak sisi yang saling berkaitan. Ketika penjualan menurun, persoalannya belum tentu hanya di bidang pemasaran; bisa jadi berhubungan dengan struktur insentif SDM, inefisiensi alur operasional, atau kekeliruan analisis margin produk.
+                  </p>
+
+                  <div className="p-5 rounded-xl bg-white border-l-4 border-maroon-800 shadow-sm space-y-2">
+                    <p className="text-sm font-semibold text-charcoal-900">
+                      Karena itu, kami tidak bekerja sebagai spesialis yang berdiri sendiri secara terpisah.
+                    </p>
+                    <p className="text-xs text-stone-600 leading-relaxed">
+                      Kami hadir dan bekerja sebagai <strong>satu tim utuh</strong> dengan perspektif yang terintegrasi dari berbagai divisi keahlian untuk memberikan solusi menyeluruh.
+                    </p>
+                  </div>
+
+                  <div className="pt-2">
+                    <a
+                      href="#team"
+                      className="inline-flex items-center text-sm font-bold text-olive-800 hover:text-olive-900 transition-colors gap-2"
+                    >
+                      <span>Kenali Profil Para Spesialis Kami</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right side: 8 perspectives interactive showcase */}
+                <div className="lg:col-span-6">
+                  <div className="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-subtle">
+                    <h3 className="text-sm font-bold text-charcoal-900 uppercase tracking-wider mb-5 flex items-center justify-between">
+                      <span>Integrasi Sudut Pandang Keahlian:</span>
+                      <span className="text-xs text-olive-700 font-semibold">8 Pilar Terpadu</span>
+                    </h3>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-maroon-800 block mb-0.5">Strategic Leadership</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Menentukan arah dan memastikan organisasi bergerak menuju tujuan yang sama.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-olive-800 block mb-0.5">Business Strategy</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Menerjemahkan visi korporat menjadi pilihan prioritas bisnis yang terukur.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-maroon-800 block mb-0.5">Marketing</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Menghubungkan nilai bisnis dengan pasar dan menciptakan pertumbuhan penjualan.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-olive-800 block mb-0.5">People &amp; HR</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Menggerakkan organisasi dan membangun kapabilitas serta etos manusia.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-maroon-800 block mb-0.5">Finance</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Menjaga kesehatan likuiditas, efisiensi modal, dan keberlanjutan bisnis.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-olive-800 block mb-0.5">Operations</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Memastikan strategi berjalan menjadi proses kerja dan produktivitas nyata.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-maroon-800 block mb-0.5">Technology</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Meningkatkan kemampuan, otomatisasi, dan efisiensi sistem kerja bisnis.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-lg bg-stone-50 border border-stone-200/80">
+                        <span className="text-xs font-bold text-olive-800 block mb-0.5">Digital &amp; Big Data</span>
+                        <p className="text-xs text-stone-600 leading-snug">
+                          Membuka cara baru untuk beradaptasi, berinovasi, dan mengambil keputusan terukur.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* OUR TEAM SECTION */}
+          <section id="team" className="py-20 lg:py-28 bg-white border-b border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span className="text-xs font-bold text-olive-800 tracking-widest uppercase block">
+                  MEET OUR TEAM &bull; PROFIL KONSULTAN
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                  Dipimpin oleh Praktisi dan Akademisi Berpengalaman
+                </h2>
+                <div className="w-16 h-1 bg-olive-700 mx-auto mt-2"></div>
+                <p className="text-lg text-stone-600 pt-2 leading-relaxed">
+                  Para konsultan spesialis kami memiliki rekam jejak formal dan keahlian teruji di berbagai bidang manajemen korporat dan UKM.
+                </p>
+              </div>
+
+              {/* 6 Team Member Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {TEAM_MEMBERS.map((member, index) => (
+                  <div
+                    key={member.name}
+                    className="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-stone-200 shadow-subtle hover:shadow-elevated hover:border-olive-700 transition-all duration-200 flex flex-col group"
+                  >
+                    {/* Portrait Frame */}
+                    <div className="relative h-64 sm:h-72 bg-stone-200 overflow-hidden flex items-center justify-center">
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          // Fallback to elegant initials avatar
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div
+                        style={{ display: 'none' }}
+                        className="w-full h-full bg-gradient-to-br from-olive-800 to-charcoal-900 text-ivory-100 flex-col items-center justify-center font-serif text-4xl font-bold"
+                      >
+                        {member.initials}
+                        <span className="text-xs font-sans text-stone-300 mt-2">JP &amp; Partners</span>
+                      </div>
+                      
+                      {/* Elegant Accent Tag */}
+                      <div className="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 backdrop-blur-sm text-[11px] font-bold text-stone-700 border border-stone-200 shadow-sm">
+                        Konsultan
+                      </div>
+                    </div>
+
+                    {/* Member Details */}
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="font-serif text-lg font-bold text-charcoal-900 leading-snug mb-1">
+                          {member.name}
+                        </h3>
+
+                        <p className="text-xs font-semibold text-maroon-800 mb-3 leading-relaxed">
+                          {member.role}
+                        </p>
+
+                        <p className="text-xs text-stone-600 leading-relaxed">
+                          {member.bio}
+                        </p>
+                      </div>
+
+                      <div className="pt-4 mt-4 border-t border-stone-200/80 flex items-center justify-between text-[11px] text-stone-500">
+                        <span>Spesialis Senior</span>
+                        <span className="text-olive-800 font-semibold">Tersedia Diskusi Proyek</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </section>
+
+          {/* PRICING & PACKAGES SECTION */}
+          <section id="pricing" className="py-20 lg:py-28 bg-[#FAF8F5] border-b border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
+                <span className="text-xs font-bold text-maroon-800 tracking-widest uppercase block">
+                  PRICING &amp; PACKAGES &bull; PAKET INVESTASI
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                  Struktur Biaya Transparan Sesuai Ruang Lingkup
+                </h2>
+                <div className="w-16 h-1 bg-maroon-800 mx-auto mt-2"></div>
+                <p className="text-stone-600 text-base sm:text-lg pt-2 leading-relaxed">
+                  Kami menawarkan paket layanan terukur mulai dari diagnostik awal hingga pendampingan transformasi menyeluruh.
+                </p>
+              </div>
+
+              {/* Category Filter Pills */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+                {[
+                  { key: "all", label: "Semua Paket" },
+                  { key: "flagship", label: "Paket Transformasi Utama" },
+                  { key: "finance", label: "01 Finance" },
+                  { key: "strategy", label: "02 Strategy" },
+                  { key: "hr", label: "03 HR" },
+                  { key: "marketing", label: "04 Marketing" },
+                  { key: "data", label: "05 Data & IT" },
+                  { key: "operations", label: "06 Operations" }
+                ].map((tab) => (
+                  <button
+                    key={tab.key}
+                    type="button"
+                    onClick={() => setSelectedPricingCategory(tab.key)}
+                    className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-150 ${
+                      selectedPricingCategory === tab.key
+                        ? 'bg-olive-800 text-white shadow-sm'
+                        : 'bg-white text-stone-700 hover:bg-stone-100 border border-stone-200'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Packages Cards Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPackages.map((pkg, idx) => (
+                  <div
+                    key={`${pkg.areaKey}-${pkg.title}`}
+                    className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 ${
+                      pkg.highlight
+                        ? 'bg-charcoal-900 text-white border-2 border-olive-500 shadow-elevated md:col-span-2 lg:col-span-3'
+                        : 'bg-white text-charcoal-900 border border-stone-200 shadow-subtle hover:border-olive-600 hover:shadow-elevated'
+                    }`}
+                  >
+                    <div>
+                      {/* Header & Badges */}
+                      <div className="flex items-center justify-between gap-2 mb-4">
+                        <span className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded ${
+                          pkg.highlight ? 'bg-maroon-800 text-white' : 'bg-olive-50 text-olive-800 border border-olive-200'
+                        }`}>
+                          {pkg.badge}
+                        </span>
+                        <span className={`text-xs ${pkg.highlight ? 'text-stone-400' : 'text-stone-500'}`}>
+                          {pkg.areaName}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className={`font-serif text-xl sm:text-2xl font-bold mb-2 ${
+                        pkg.highlight ? 'text-white' : 'text-charcoal-900'
+                      }`}>
+                        {pkg.title}
+                      </h3>
+
+                      {/* Scope description */}
+                      <p className={`text-xs sm:text-sm leading-relaxed mb-6 ${
+                        pkg.highlight ? 'text-stone-300' : 'text-stone-600'
+                      }`}>
+                        {pkg.scope}
+                      </p>
+
+                      {/* Price Tag */}
+                      <div className={`p-4 rounded-xl mb-6 ${
+                        pkg.highlight ? 'bg-zinc-800/80 border border-zinc-700' : 'bg-[#FAF8F5] border border-stone-200'
+                      }`}>
+                        <span className={`text-[11px] font-semibold block uppercase tracking-wider ${
+                          pkg.highlight ? 'text-stone-400' : 'text-stone-500'
+                        }`}>
+                          Estimasi Biaya Investasi
+                        </span>
+                        <span className={`font-serif text-2xl sm:text-3xl font-extrabold block mt-0.5 ${
+                          pkg.highlight ? 'text-olive-400' : 'text-maroon-800'
+                        }`}>
+                          {pkg.price}
+                        </span>
+                      </div>
+
+                      {/* Deliverables List */}
+                      <div className="space-y-2 mb-8">
+                        <span className={`text-xs font-bold uppercase tracking-wider block mb-2 ${
+                          pkg.highlight ? 'text-stone-300' : 'text-stone-700'
+                        }`}>
+                          Ruang Lingkup &amp; Keluaran:
+                        </span>
+                        <ul className="space-y-2">
+                          {pkg.features.map((feat, fIdx) => (
+                            <li key={fIdx} className="text-xs flex items-start gap-2.5">
+                              <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+                                pkg.highlight ? 'text-olive-400' : 'text-olive-700'
+                              }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span className={pkg.highlight ? 'text-stone-200' : 'text-stone-700'}>
+                                {feat}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Button */}
+                    <button
+                      type="button"
+                      onClick={() => handleSelectPackage(pkg.title)}
+                      className={`w-full py-3 px-5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-150 flex items-center justify-center gap-2 ${
+                        pkg.highlight
+                          ? 'bg-olive-600 text-white hover:bg-olive-500 active:bg-olive-700 shadow-md'
+                          : 'bg-olive-800 text-white hover:bg-olive-900 active:bg-charcoal-900'
+                      }`}
+                    >
+                      <span>Pilih &amp; Konsultasikan Paket Ini</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </button>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mandatory Official Note */}
+              <div className="mt-12 p-5 rounded-xl bg-white border border-stone-200 text-center max-w-2xl mx-auto shadow-sm">
+                <p className="text-xs sm:text-sm text-stone-600 italic">
+                  * Seluruh biaya tergantung tingkat kerumitan, banyaknya data, dan jumlah spesialis yang terlibat.
+                </p>
+                <p className="text-xs text-stone-500 mt-1">
+                  Kami siap melakukan diskusi pendahuluan untuk memetakan ruang lingkup yang paling tepat sebelum penawaran resmi.
+                </p>
+              </div>
+
+            </div>
+          </section>
+
+          {/* CONTACT & FOOTER SECTION */}
+          <section id="contact" className="py-20 lg:py-28 bg-white border-b border-stone-200 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                {/* Contact Information & Office Details */}
+                <div className="lg:col-span-5 space-y-8 text-left">
+                  <div>
+                    <span className="text-xs font-bold text-maroon-800 tracking-widest uppercase block mb-2">
+                      GET IN TOUCH &bull; HUBUNGI KAMI
+                    </span>
+                    <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                      Mulai Langkah Pertumbuhan Bisnis Anda Hari Ini
+                    </h2>
+                    <p className="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
+                      Sampaikan tantangan bisnis atau ruang lingkup konsultasi yang Anda butuhkan. Tim spesialis kami siap berdiskusi dan menjadwalkan sesi diagnostik awal.
+                    </p>
+                  </div>
+
+                  {/* Office & Contact Cards */}
+                  <div className="space-y-4">
+                    
+                    {/* Phone / WA */}
+                    <div className="flex items-start gap-4 p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+                      <div className="w-10 h-10 rounded-lg bg-olive-100 text-olive-800 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs text-stone-500 font-semibold block uppercase">Telepon / WhatsApp</span>
+                        <a href="https://wa.me/6281919011011" target="_blank" rel="noopener noreferrer" className="text-base font-bold text-charcoal-900 hover:text-olive-700 transition-colors">
+                          08 1919 011011
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex items-start gap-4 p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+                      <div className="w-10 h-10 rounded-lg bg-maroon-100 text-maroon-800 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs text-stone-500 font-semibold block uppercase">Email Resmi</span>
+                        <a href="mailto:24.jppartners@gmail.com" className="text-base font-bold text-charcoal-900 hover:text-maroon-800 transition-colors">
+                          24.jppartners@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Instagram */}
+                    <div className="flex items-start gap-4 p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+                      <div className="w-10 h-10 rounded-lg bg-stone-200 text-stone-800 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs text-stone-500 font-semibold block uppercase">Instagram</span>
+                        <a href="https://instagram.com/jp.andpartners" target="_blank" rel="noopener noreferrer" className="text-base font-bold text-charcoal-900 hover:text-stone-700 transition-colors">
+                          @jp.andpartners
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Address */}
+                    <div className="flex items-start gap-4 p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+                      <div className="w-10 h-10 rounded-lg bg-olive-100 text-olive-800 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs text-stone-500 font-semibold block uppercase">Kantor Konsultansi</span>
+                        <p className="text-sm font-semibold text-charcoal-900 leading-snug">
+                          Perum Graha Timur, Jl. GT 16 no 4B, Purwokerto Wetan, Purwokerto Timur, Banyumas.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Interactive Contact Form */}
+                <div className="lg:col-span-7">
+                  <div className="bg-[#FAF8F5] rounded-2xl p-6 sm:p-10 border border-stone-200 shadow-subtle">
+                    
+                    <h3 className="font-serif text-2xl font-bold text-charcoal-900 mb-2">
+                      Formulir Konsultasi Bisnis
+                    </h3>
+                    <p className="text-xs sm:text-sm text-stone-600 mb-6">
+                      Isi informasi berikut untuk mendiskusikan kebutuhan perusahaan Anda langsung dengan tim konsultan kami.
+                    </p>
+
+                    {formStatus === "success" ? (
+                      <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-left space-y-4 animate-fadeIn">
+                        <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
+                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div className="text-center">
+                          <h4 className="text-lg font-bold text-emerald-900">Terima Kasih, Pesan Berhasil Terkirim</h4>
+                          <p className="text-sm text-emerald-800 mt-1">
+                            Tim konsultan JP &amp; Partners telah menerima rincian Anda dan akan segera menghubungi via WhatsApp atau email.
+                          </p>
+                        </div>
+
+                        <div className="pt-2 text-center">
+                          <a
+                            href={getWhatsAppLink()}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-bold text-white bg-emerald-700 hover:bg-emerald-800 transition-colors shadow-sm gap-2"
+                          >
+                            <span>Lanjutkan Chat via WhatsApp Sekarang</span>
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                          </a>
+                        </div>
+
+                        <div className="text-center pt-2">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setFormStatus("idle");
+                              setFormData({ name: "", company: "", email: "", phone: "", service: "", message: "" });
+                            }}
+                            className="text-xs text-stone-500 hover:text-stone-800 underline"
+                          >
+                            Kirim formulir konsultasi lainnya
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleSubmit} className="space-y-4">
+                        
+                        {formErrorMsg && (
+                          <div className="p-3.5 rounded-lg bg-red-50 border border-red-200 text-xs text-red-800 flex items-center gap-2">
+                            <svg className="w-4 h-4 text-red-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span>{formErrorMsg}</span>
+                          </div>
+                        )}
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="name">
+                              Nama Lengkap <span className="text-red-600">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              id="name"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              placeholder="Misal: Budi Santoso"
+                              className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                              required
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="company">
+                              Nama Perusahaan / Bisnis
+                            </label>
+                            <input
+                              type="text"
+                              id="company"
+                              name="company"
+                              value={formData.company}
+                              onChange={handleChange}
+                              placeholder="Misal: PT Maju Bersama"
+                              className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="email">
+                              Email Perusahaan <span className="text-red-600">*</span>
+                            </label>
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              placeholder="nama@perusahaan.com"
+                              className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                              required
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="phone">
+                              Nomor WhatsApp / Telepon <span className="text-red-600">*</span>
+                            </label>
+                            <input
+                              type="tel"
+                              id="phone"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleChange}
+                              placeholder="0812xxxxxxxx"
+                              className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="service">
+                            Layanan atau Paket yang Diminati
+                          </label>
+                          <select
+                            id="service"
+                            name="service"
+                            value={formData.service}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                          >
+                            <option value="">-- Pilih Layanan / Paket (Opsional) --</option>
+                            <option value="Business Transformation Package">Business Transformation Package (Rp50-100 Jt)</option>
+                            <option value="Financial Check-up">Finance: Financial Check-up (Rp3-7,5 Jt)</option>
+                            <option value="Financial System Setup">Finance: Financial System Setup (Rp7,5-15 Jt)</option>
+                            <option value="Business Health Check">Business Strategy: Business Health Check (Rp5-10 Jt)</option>
+                            <option value="Business Strategy Development">Business Strategy: Strategy Development (Rp15-30 Jt)</option>
+                            <option value="HR Audit">Human Resources: HR Audit (Rp5-10 Jt)</option>
+                            <option value="HR System Development">Human Resources: HR System Development (Rp15-30 Jt)</option>
+                            <option value="Marketing Audit">Marketing: Marketing Audit (Rp5-10 Jt)</option>
+                            <option value="Marketing Strategy">Marketing: Marketing Strategy (Rp10-25 Jt)</option>
+                            <option value="Data & Business Diagnostic">Data & IT: Data & Business Diagnostic (Rp5-10 Jt)</option>
+                            <option value="Dashboard Development">Data & IT: Dashboard Development (Rp7,5-20 Jt)</option>
+                            <option value="Operational Audit">Operations: Operational Audit (Rp5-10 Jt)</option>
+                            <option value="SOP Development">Operations: SOP Development (Rp10-25 Jt)</option>
+                            <option value="Konsultasi Kustom">Diskusi Kebutuhan Kustom Lainnya</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" htmlFor="message">
+                            Ceritakan Tantangan Bisnis Anda <span className="text-red-600">*</span>
+                          </label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder="Jelaskan secara singkat kendala operasional, keuangan, atau tujuan pertumbuhan yang ingin dicapai..."
+                            className="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-charcoal-900 text-sm focus:border-olive-700 focus:ring-1 focus:ring-olive-700"
+                            required
+                          ></textarea>
+                        </div>
+
+                        <div className="pt-2">
+                          <button
+                            type="submit"
+                            disabled={formStatus === "sending"}
+                            className="w-full py-3.5 px-6 rounded-lg text-sm font-bold text-white bg-olive-700 hover:bg-olive-800 active:bg-olive-900 transition-colors shadow-md flex items-center justify-center gap-2 disabled:opacity-70"
+                          >
+                            {formStatus === "sending" ? (
+                              <span>Mengirim data...</span>
+                            ) : (
+                              <>
+                                <span>Kirim Permintaan Konsultasi</span>
+                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                              </>
+                            )}
+                          </button>
+                        </div>
+
+                        <p className="text-[11px] text-stone-500 text-center pt-1">
+                          Kerahasiaan data perusahaan Anda terjamin sepenuhnya di bawah etika profesional konsultan.
+                        </p>
+                      </form>
+                    )}
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* FOOTER */}
+          <footer className="bg-charcoal-950 text-stone-400 py-12 border-t border-zinc-800 text-xs">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+                
+                {/* Col 1: Brand info */}
+                <div className="space-y-4 md:col-span-2">
+                  <div className="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="JP & Partners" className="h-9 w-auto object-contain brightness-0 invert opacity-90" />
+                    <div>
+                      <span className="font-serif font-bold text-base text-white tracking-wider block">JP &amp; PARTNERS</span>
+                      <span className="text-[10px] tracking-widest text-stone-400 uppercase font-medium block">Business &amp; Management Consulting</span>
+                    </div>
+                  </div>
+                  <p className="text-stone-400 text-xs leading-relaxed max-w-md">
+                    Firma konsultan bisnis dan manajemen dengan pendekatan multidisiplin. Menghubungkan strategi, operasi, SDM, keuangan, pemasaran, dan analitik data untuk pertumbuhan perusahaan yang berkelanjutan.
+                  </p>
+                </div>
+
+                {/* Col 2: Nav Quick Links */}
+                <div>
+                  <h4 className="text-white font-bold uppercase tracking-wider mb-3.5 text-xs">Navigasi Cepat</h4>
+                  <ul className="space-y-2">
+                    {NAV_LINKS.map(item => (
+                      <li key={item.name}>
+                        <a href={item.href} className="hover:text-olive-400 transition-colors">
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Col 3: Practice Areas */}
+                <div>
+                  <h4 className="text-white font-bold uppercase tracking-wider mb-3.5 text-xs">Practice Areas</h4>
+                  <ul className="space-y-2">
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">Business Strategy</a></li>
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">Operations &amp; Process</a></li>
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">People &amp; Organization</a></li>
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">Marketing &amp; Growth</a></li>
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">Finance &amp; Performance</a></li>
+                    <li><a href="#services" className="hover:text-olive-400 transition-colors">Data Analytics &amp; IT</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              {/* Bottom Copyright & Credit */}
+              <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 text-[11px]">
+                <div>
+                  &copy; {new Date().getFullYear()} JP &amp; PARTNERS. Seluruh hak cipta dilindungi.
+                </div>
+                <div className="flex items-center gap-6">
+                  <span>Purwokerto, Jawa Tengah, Indonesia</span>
+                  <a href="#root" className="text-stone-400 hover:text-white transition-colors">Kembali ke Atas &uarr;</a>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+
+        </div>
+      );
+    }
+
+    // Mount the React component
+    const rootElement = document.getElementById("root");
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<App />);
+  </script>
+</body>
+</html>
