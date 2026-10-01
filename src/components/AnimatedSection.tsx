@@ -28,8 +28,8 @@ export default function AnimatedSection({
       },
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px", // Trigger slightly before it comes fully into view, or when 50px is visible
+        threshold: 0, // 0 ensures it triggers even if the element is taller than the viewport
       }
     );
 

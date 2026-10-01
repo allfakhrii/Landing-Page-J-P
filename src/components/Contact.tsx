@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent } from 'react';
+import { useState, useEffect, type ChangeEvent } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { buttonVariants } from './ui/button';
 import { Input } from './ui/input';
@@ -14,6 +14,42 @@ export default function Contact() {
     service: "",
     message: ""
   });
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#contact?service=')) {
+        const serviceParam = hash.split('?service=')[1];
+        if (serviceParam) {
+          const decoded = decodeURIComponent(serviceParam);
+          setFormData(prev => ({ ...prev, service: decoded }));
+          
+          setTimeout(() => {
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }, 50);
+        }
+      }
+    };
+    
+    const handleCustomSelect = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail) {
+        setFormData(prev => ({ ...prev, service: customEvent.detail }));
+      }
+    };
+    
+    // Check on mount
+    handleHashChange();
+    
+    // Listen for future changes
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('packageSelected', handleCustomSelect);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('packageSelected', handleCustomSelect);
+    };
+  }, []);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -104,6 +140,9 @@ export default function Contact() {
                       <option value="Marketing & Growth">Marketing & Growth</option>
                       <option value="Operations & Process">Operations & Process</option>
                       <option value="Technology & Digital">Technology & Digital</option>
+                      {formData.service && !["Business Strategy", "Finance & Performance", "People & Organization", "Marketing & Growth", "Operations & Process", "Technology & Digital", "Lainnya"].includes(formData.service) && (
+                        <option value={formData.service}>{formData.service}</option>
+                      )}
                       <option value="Lainnya">Lainnya / Ingin Konsultasi Dulu</option>
                     </select>
                   </div>

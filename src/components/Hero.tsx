@@ -3,7 +3,7 @@ import { Badge } from './ui/badge';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[100svh] flex flex-col justify-center border-b border-border">
+    <section id="hero" className="relative overflow-hidden min-h-[100svh] flex flex-col justify-center border-b border-border">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center mt-12">
         <Badge variant="secondary" className="mb-6 uppercase tracking-widest text-[10px] font-bold">

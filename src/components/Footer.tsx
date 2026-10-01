@@ -1,4 +1,5 @@
 import { NAV_LINKS } from '../data';
+import logo from '../assets/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,9 @@ export default function Footer() {
           
           {/* Brand & Intro */}
           <div className="col-span-1 md:col-span-2 space-y-4">
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-serif font-bold text-lg tracking-wider text-foreground">JP &amp; PARTNERS</span>
-              <span className="text-[10px] tracking-widest text-muted-foreground uppercase font-medium">Consulting</span>
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="JP & PARTNERS Logo" className="h-12 w-auto object-contain" />
+              <span className="font-serif font-bold text-xl tracking-wider text-foreground">JP &amp; Co.</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
               Membantu merancang peta jalan menuju efisiensi, pertumbuhan, dan keberlanjutan bisnis Anda.

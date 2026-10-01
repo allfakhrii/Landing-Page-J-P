@@ -73,7 +73,18 @@ export default function Pricing() {
                 </ul>
               </CardContent>
               <CardFooter className="pt-6 border-t border-border/50">
-                <a href={`#contact?service=${encodeURIComponent(pkg.title)}`} className={buttonVariants({ variant: pkg.highlight ? 'default' : 'outline', className: "w-full" })}>
+                <a 
+                  href={`#contact?service=${encodeURIComponent(pkg.title)}`} 
+                  onClick={() => {
+                    // Update state via CustomEvent so it's guaranteed to run even if hash doesn't change
+                    window.dispatchEvent(new CustomEvent('packageSelected', { detail: pkg.title }));
+                    // Explicitly scroll down
+                    setTimeout(() => {
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 50);
+                  }}
+                  className={buttonVariants({ variant: pkg.highlight ? 'default' : 'outline', className: "w-full" })}
+                >
                   Pilih Paket Ini
                 </a>
               </CardFooter>

@@ -8,7 +8,7 @@ export default function HowWeWork() {
       <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="lg:w-1/3">
-            <div className="sticky top-32">
+            <div className="sticky top-32 text-center lg:text-left">
               <Badge variant="outline" className="mb-4">METODOLOGI</Badge>
               <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Cara Kerja Kami</h2>
               <p className="text-muted-foreground leading-relaxed">

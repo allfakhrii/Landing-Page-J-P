@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,6 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,19 +22,24 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans flex flex-col">
-      <Navbar scrolled={scrolled} />
-      <main className="flex-1">
-        <Hero />
-        <Services />
-        <HowWeWork />
-        <Team />
-        <Pricing />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      
+      <div className={`min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans flex flex-col ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+        <Navbar scrolled={scrolled} />
+        <main className="flex-1">
+          <Hero />
+          <Services />
+          <HowWeWork />
+          <Team />
+          <Pricing />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 
 export default App;
+
