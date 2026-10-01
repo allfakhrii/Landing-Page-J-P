@@ -25,7 +25,7 @@ export default function Pricing() {
   }, [filter]);
 
   return (
-    <section id="pricing" className="py-24 border-t border-border bg-background">
+    <section id="pricing" className="py-24 border-t border-border bg-transparent">
       <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="outline" className="mb-4">INVESTASI</Badge>
@@ -51,7 +51,7 @@ export default function Pricing() {
 
         <div className="flex flex-wrap justify-center gap-6">
           {filteredData.map((pkg, idx) => (
-            <Card key={idx} className={`w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 flex flex-col ${pkg.highlight ? 'border-primary ring-1 ring-primary/20 shadow-md' : 'bg-background'}`}>
+            <Card key={idx} className={`w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${pkg.highlight ? 'border-primary ring-1 ring-primary/20 shadow-md hover:ring-primary/40' : 'bg-transparent hover:border-primary/50'}`}>
               <CardHeader>
                 <div className="flex justify-between items-start mb-4">
                   <Badge variant={pkg.highlight ? 'default' : 'secondary'} className="text-[10px]">{pkg.badge}</Badge>

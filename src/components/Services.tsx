@@ -14,22 +14,28 @@ export default function Services() {
         </div>
         
         <div className="flex flex-wrap justify-center gap-6">
-          {SERVICES_DATA.map((service) => (
-            <Card key={service.id} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 group hover:border-primary/50 transition-all duration-300 hover:shadow-lg bg-background">
+          {SERVICES_DATA.map((service, idx) => (
+            <Card 
+              key={service.id} 
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 group hover:border-primary/50 hover:bg-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-background overflow-hidden relative"
+            >
+              {/* Decorative accent on hover */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
               <CardHeader>
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/20 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
                     <path strokeLinecap="round" strokeLinejoin="round" d={service.iconPath} />
                   </svg>
                 </div>
-                <Badge variant="secondary" className="w-fit mb-2 text-[10px]">{service.category}</Badge>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                <Badge variant="secondary" className="w-fit mb-2 text-[10px] group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{service.category}</Badge>
+                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">{service.title}</CardTitle>
                 <CardDescription className="leading-relaxed mt-2">{service.desc}</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mt-2">
                   {service.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                       <span className="text-primary mt-1">•</span>
                       <span>{detail}</span>
                     </li>
