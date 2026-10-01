@@ -4,7 +4,15 @@ import { Badge } from './ui/badge';
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden min-h-[100svh] flex flex-col justify-center border-b border-border">
+      {/* Decorative Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-[20%] left-[10%] w-32 h-32 border border-primary/20 rounded-full animate-[spin_8s_linear_infinite] opacity-50 hidden md:block">
+        <div className="absolute top-0 left-1/2 w-2 h-2 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      </div>
+      <div className="absolute bottom-[20%] right-[10%] w-24 h-24 border border-secondary-foreground/10 rotate-45 animate-[spin_12s_linear_infinite_reverse] opacity-50 hidden md:block"></div>
+      <div className="absolute top-[30%] right-[20%] w-4 h-4 bg-primary/30 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
+      <div className="absolute bottom-[30%] left-[15%] w-6 h-6 bg-primary/20 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center mt-12">
         <Badge variant="secondary" className="mb-6 uppercase tracking-widest text-[10px] font-bold animate-in fade-in zoom-in duration-1000 fill-mode-both">
           Konsultan Bisnis & Manajemen

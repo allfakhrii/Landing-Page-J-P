@@ -51,15 +51,21 @@ export default function Pricing() {
 
         <div className="flex flex-wrap justify-center gap-6">
           {filteredData.map((pkg, idx) => (
-            <Card key={idx} className={`w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${pkg.highlight ? 'border-primary ring-1 ring-primary/20 shadow-md hover:ring-primary/40' : 'bg-transparent hover:border-primary/50'}`}>
-              <CardHeader>
-                <div className="flex justify-between items-start mb-4">
-                  <Badge variant={pkg.highlight ? 'default' : 'secondary'} className="text-[10px]">{pkg.badge}</Badge>
-                </div>
-                <CardTitle className="text-xl mb-1">{pkg.title}</CardTitle>
-                <div className="text-sm text-primary font-bold mt-2">{pkg.price}</div>
-                <CardDescription className="mt-4">{pkg.scope}</CardDescription>
-              </CardHeader>
+            <div key={idx} className={`w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 flex flex-col relative group`}>
+              {/* Glowing background for highlighted packages */}
+              {pkg.highlight && (
+                <div className="absolute -inset-1 bg-primary/20 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              )}
+              
+              <Card className={`relative h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-background ${pkg.highlight ? 'border-primary ring-1 ring-primary/30 shadow-md' : 'hover:border-primary/50'}`}>
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-4">
+                    <Badge variant={pkg.highlight ? 'default' : 'secondary'} className="text-[10px]">{pkg.badge}</Badge>
+                  </div>
+                  <CardTitle className="text-xl mb-1">{pkg.title}</CardTitle>
+                  <div className="text-sm text-primary font-bold mt-2">{pkg.price}</div>
+                  <CardDescription className="mt-4">{pkg.scope}</CardDescription>
+                </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-3">
                   {pkg.features.map((feature, fIdx) => (
@@ -89,6 +95,7 @@ export default function Pricing() {
                 </a>
               </CardFooter>
             </Card>
+            </div>
           ))}
         </div>
       </AnimatedSection>

@@ -14,7 +14,7 @@ export default function Services() {
         </div>
         
         <div className="flex flex-wrap justify-center gap-6">
-          {SERVICES_DATA.map((service, idx) => (
+          {SERVICES_DATA.map((service) => (
             <Card 
               key={service.id} 
               className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 group hover:border-primary/50 hover:bg-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-background overflow-hidden relative"
