@@ -32,8 +32,8 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
         <div
           className={`pointer-events-auto transition-all duration-300 ease-out text-foreground border ${
             scrolled
-              ? 'w-full max-w-5xl rounded-full py-2 px-3.5 sm:px-5 shadow-lg border-border/60 bg-white/85 dark:bg-neutral-950/85 backdrop-blur-[24px] backdrop-saturate-[1.8]'
-              : 'w-full max-w-5xl rounded-full py-2.5 px-4 sm:px-6 border-border/40 shadow-md bg-white/75 dark:bg-neutral-950/75 backdrop-blur-[20px] backdrop-saturate-[1.8]'
+              ? 'w-full max-w-4xl rounded-full py-2 px-3.5 sm:px-5 shadow-lg border-border/60 bg-white/85 dark:bg-neutral-950/85 backdrop-blur-[24px] backdrop-saturate-[1.8]'
+              : 'w-full max-w-4xl rounded-full py-2.5 px-4 sm:px-6 border-border/40 shadow-md bg-white/75 dark:bg-neutral-950/75 backdrop-blur-[20px] backdrop-saturate-[1.8]'
           }`}
         >
           <div className="flex items-center justify-between w-full">

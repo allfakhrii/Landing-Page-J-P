@@ -99,42 +99,42 @@ export const HOW_WE_WORK_STEPS = [
 
 export const TEAM_MEMBERS = [
   {
-    name: "Joko Purwadi, S.S., M.M., C.L.M., COMP",
+    name: "Joko Purwadi, S.S., M.M., CCSME., CLM., COMP",
     role: "Managing Partners | Operations Management Specialist | Leadership | Business Incubation & Entrepreneurship",
     initials: "JP",
     photo: "assets/team/joko.png",
     bio: "Berkompeten dan tersertifikasi di bidang manajemen operasional serta pengembangan bisnis. Memadukan kepemimpinan, kewirausahaan, dan kemampuan pengembangan usaha untuk membantu organisasi membangun sistem yang efektif serta mendorong pertumbuhan berkelanjutan (sustainable growth). Menjabat sebagai Mitra Pengelola dan Spesialis Manajemen Operasional, dengan fokus kepemimpinan, pengembangan usaha, dan kewirausahaan."
   },
   {
-    name: "Sageri F. Ramadhan, S.Kom., M.M., CRM",
+    name: "Sageri F. Ramadhan, S.Kom., M.M., CSPP., CRM",
     role: "Business Strategy Specialist",
     initials: "SR",
     photo: "assets/team/sageri.png",
     bio: "Spesialis Strategi Bisnis dengan pengalaman lebih dari 5 tahun di sektor perbankan. Fokus utama pada penyusunan strategi bisnis berbasis data serta pengambilan keputusan yang didukung analisis mendalam. Pengalaman tersebut menjadi landasan kuat untuk memastikan setiap rekomendasi yang diberikan selaras dengan kebutuhan bisnis, hasilnya dapat diukur secara nyata, dan siap diterapkan secara langsung serta berkelanjutan."
   },
   {
-    name: "Seira Latanssa, S.Psi., M.M., QRMO",
+    name: "Seira Latanssa, S.Psi., M.M., CHME., QRMO",
     role: "Human Resource Management Specialist",
     initials: "SL",
     photo: "assets/team/seira.png",
     bio: "Praktisi Konsultan SDM dan Organisasi dengan pengalaman lebih dari 10 tahun. Memimpin berbagai inisiatif Pengembangan Sumber Daya Manusia. Berpengalaman menerjemahkan kebutuhan bisnis dan model operasional pada beragam sektor industri, untuk mendukung pembangunan sistem manajemen SDM yang lebih objektif, terukur, serta selaras dengan peningkatan kinerja perusahaan."
   },
   {
-    name: "Akmal Darari Rafif Baskoro, S.Kom., M.M",
+    name: "Akmal Darari Rafif Baskoro, S.Kom., M.M., CPMM., CSPP",
     role: "Marketing Management Specialist",
     initials: "AB",
     photo: "assets/team/akmal.png",
     bio: "Praktisi di bidang Digital Marketing yang berfokus pada pemasaran di bidang media sosial terutama yang menyesuaikan pada selera pemasaran saat ini atau isu-isu yang berkembang terkait dengan pemasaran digital. Berpengalaman menangani hal-hal terkait pemasaran digital seperti tourism, sektor UMKM, makanan dan minuman, serta hal yang bersentuhan langsung kepada konsumen umum."
   },
   {
-    name: "Mandon Febriyanto, S.Ak., S.M, M.M., ACPA.",
+    name: "Mandon Febriyanto, S.Ak., S.M, M.M., ACPA., CFA.MSMes",
     role: "Financial Management Specialist",
     initials: "MF",
     photo: "assets/team/mandon.png",
     bio: "Profesional Keuangan dan Akuntansi berorientasi pada hasil, dengan pengalaman lebih dari 8 tahun di sektor publik. Didukung oleh keahlian manajemen risiko keuangan, analisis anggaran strategis, dan pengelolaan perbendaharaan guna menjaga kelancaran arus kas organisasi, guna menyajikan akuntansi dan pelaporan korporasi yang akurat, tepat waktu, serta patuh terhadap standar regulasi tertinggi demi mendorong pertumbuhan bisnis yang berkelanjutan."
   },
   {
-    name: "Fatih Al-Fakhri Muhammad",
+    name: "Fatih Al-Fakhri Muhammad, CJDS., CFWD",
     role: "Data Science & Information Technology Specialist",
     initials: "FA",
     photo: "assets/team/fatih.png",

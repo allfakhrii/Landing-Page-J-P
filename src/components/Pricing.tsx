@@ -49,15 +49,15 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex md:flex-wrap md:justify-center gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory hide-scrollbar -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0">
           {filteredData.map((pkg, idx) => (
-            <div key={idx} className={`w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-grow-0 flex flex-col relative group`}>
+            <div key={idx} className={`w-[85%] max-w-[320px] flex-shrink-0 snap-center md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] md:flex-shrink md:flex-grow-0 flex flex-col relative group`}>
               {/* Glowing background for highlighted packages */}
               {pkg.highlight && (
-                <div className="absolute -inset-1 bg-primary/20 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-primary/20 rounded-2xl blur-lg opacity-50 md:group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               )}
               
-              <Card className={`relative h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-background ${pkg.highlight ? 'border-primary ring-1 ring-primary/30 shadow-md' : 'hover:border-primary/50'}`}>
+              <Card className={`relative h-full flex flex-col transition-all duration-300 md:hover:-translate-y-2 md:hover:shadow-xl bg-background ${pkg.highlight ? 'border-primary ring-1 ring-primary/30 shadow-md' : 'md:hover:border-primary/50'}`}>
                 <CardHeader>
                   <div className="flex justify-between items-start mb-4">
                     <Badge variant={pkg.highlight ? 'default' : 'secondary'} className="text-[10px]">{pkg.badge}</Badge>
