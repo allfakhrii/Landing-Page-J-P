@@ -10,7 +10,6 @@ export default function Pricing() {
 
   const categories = [
     { id: 'all', label: 'Semua Layanan' },
-    { id: 'flagship', label: 'Paket Utama' },
     { id: 'strategy', label: 'Strategy' },
     { id: 'operations', label: 'Operations' },
     { id: 'hr', label: 'HR' },
@@ -28,9 +27,9 @@ export default function Pricing() {
     <section id="pricing" className="py-24 border-t border-border bg-transparent">
       <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <Badge variant="outline" className="mb-4">INVESTASI</Badge>
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Estimasi Investasi Fleksibel</h2>
-          <p className="text-muted-foreground">Kami percaya pada transparansi. Berikut adalah panduan awal investasi untuk layanan kami, yang dapat disesuaikan dengan skala dan kompleksitas bisnis Anda.</p>
+          <Badge variant="outline" className="mb-4">LAYANAN & PAKET</Badge>
+          <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Katalog Layanan Komprehensif</h2>
+          <p className="text-muted-foreground">Jelajahi seluruh cakupan layanan strategis, operasional, dan teknologi kami. Setiap paket dirancang secara mendalam untuk mendukung pertumbuhan dan transformasi bisnis Anda.</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -63,7 +62,6 @@ export default function Pricing() {
                     <Badge variant={pkg.highlight ? 'default' : 'secondary'} className="text-[10px]">{pkg.badge}</Badge>
                   </div>
                   <CardTitle className="text-xl mb-1">{pkg.title}</CardTitle>
-                  <div className="text-sm text-primary font-bold mt-2">{pkg.price}</div>
                   <CardDescription className="mt-4">{pkg.scope}</CardDescription>
                 </CardHeader>
               <CardContent className="flex-1">

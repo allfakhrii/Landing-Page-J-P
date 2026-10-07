@@ -1,0 +1,998 @@
+[
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Strategic Direction",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Merumuskan visi, misi, tujuan, sasaran, dan prioritas strategis organisasi",
+      "Output: Strategic direction dan strategic objectives"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Business Model Development",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Mengkaji dan merumuskan model bisnis, value proposition, sumber pendapatan, serta struktur biaya",
+      "Output: Business Model Canvas dan value proposition"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Strategic Environment Analysis",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Menganalisis industri, pasar, ekosistem, pesaing, regulasi, tren, peluang, dan risiko",
+      "Output: Market and ecosystem assessment"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Customer & Stakeholder Analysis",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Memetakan karakteristik, kebutuhan, ekspektasi, dan pengaruh pelanggan maupun stakeholder",
+      "Output: Customer and stakeholder map"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Value Chain Analysis",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Memetakan aktivitas penciptaan nilai, alur pendapatan, serta keterkaitan antarproses bisnis",
+      "Output: Value chain dan revenue flow"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Organizational Health Review",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Menilai kondisi keuangan, operasional, organisasi, kapabilitas, dan kesiapan implementasi strategi",
+      "Output: Organizational health assessment"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Growth & Expansion Strategy",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Menilai peluang ekspansi, diversifikasi, kemitraan strategis, dan pengembangan bisnis",
+      "Output: Growth strategy dan business opportunity portfolio"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Strategic Partnership",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Mengidentifikasi, mengevaluasi, dan merancang model kerja sama dengan mitra bisnis",
+      "Output: Partnership strategy dan governance model"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Strategic Roadmap",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Menyusun tahapan implementasi, program strategis, milestone, PIC, kebutuhan sumber daya, dan dependensi",
+      "Output: Strategic roadmap"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Organizational KPI",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Menetapkan sasaran dan KPI organisasi yang diturunkan dari strategi",
+      "Output: Corporate KPI framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Gap Analysis",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Mengidentifikasi kesenjangan antara kondisi saat ini dan kondisi yang dituju",
+      "Output: Gap analysis dan prioritas perbaikan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Strategy Monitoring",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Memantau pencapaian strategi, mengevaluasi deviasi, dan merumuskan tindakan korektif",
+      "Output: Strategy performance review"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "strategy",
+    "areaName": "Strategic Management",
+    "badge": "Strategy",
+    "title": "Implementation Assistance",
+    "scope": "Berfokus pada penetapan arah model bisnis pertumbuhan dan penerjemahan strategi menjadi program implementasi.",
+    "features": [
+      "Aktivitas: Mendampingi pelaksanaan inisiatif dan penyelesaian kendala strategis",
+      "Output: Implementation progress report dan action plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Market Research",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menganalisis ukuran pasar, tren, perilaku pelanggan, pesaing, dan potensi permintaan",
+      "Output: Market research report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Customer Analysis",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menyusun segmentasi pelanggan, customer persona, kebutuhan, preferensi, dan customer journey",
+      "Output: Customer segmentation dan persona"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Marketing Strategy",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menetapkan target pasar, positioning, marketing objectives, channel, dan program pemasaran",
+      "Output: Marketing strategy dan marketing plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Brand Strategy",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Merumuskan identitas merek, brand positioning, key message, dan value proposition pelanggan",
+      "Output: Brand strategy dan messaging framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Go-to-Market Strategy",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menyusun strategi peluncuran produk atau layanan, channel, pricing, promotion, dan sales activation",
+      "Output: Go-to-market plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Digital Marketing",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Mengelola kampanye digital melalui website, search engine, marketplace, dan digital advertising",
+      "Output: Digital campaign plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Social Media Marketing",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menyusun strategi kanal, kalender konten, aktivasi, community engagement, dan evaluasi media sosial",
+      "Output: Social media plan dan content calendar"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Marketing Copywriting",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Menyusun konten promosi, website, media sosial, iklan, proposal, dan materi komunikasi pemasaran",
+      "Output: Marketing copy dan communication materials"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Campaign Management",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Merencanakan, menjalankan, dan mengevaluasi efektivitas kampanye pemasaran",
+      "Output: Campaign performance report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Marketing Analytics",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Memantau traffic, reach, engagement, conversion, acquisition cost, dan campaign ROI",
+      "Output: Marketing dashboard dan insights"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "marketing",
+    "areaName": "Marketing Management",
+    "badge": "Marketing",
+    "title": "Customer Retention",
+    "scope": "Berfokus pada pemahaman pasar dan pelanggan penguatan merek akuisisi pelanggan serta peningkatan efektivitas kegiatan pemasaran.",
+    "features": [
+      "Aktivitas: Mengembangkan program loyalitas, engagement, dan peningkatan customer lifetime value",
+      "Output: Customer retention program"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "HR Audit",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menilai kepatuhan, efektivitas kebijakan, proses, sistem, dokumentasi, dan tata kelola HR",
+      "Output: HR audit report dan improvement plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "HR Strategy",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun arah, prioritas, program, dan roadmap pengelolaan Human Capital",
+      "Output: HR strategy dan HC roadmap"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Organization Design",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Mengkaji dan menyusun struktur organisasi, fungsi, span of control, serta hubungan pelaporan",
+      "Output: Struktur organisasi dan organization design recommendation"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Business Process Framework",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun arsitektur dan hierarki proses bisnis organisasi",
+      "Output: Value Chain & Business process list"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Role & Accountability",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Memetakan pembagian tanggung jawab, akuntabilitas, konsultasi, dan dukungan antarunit",
+      "Output: RASCI matrix"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Job Analysis",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menganalisis tujuan, tanggung jawab, kewenangan, output, dan persyaratan jabatan",
+      "Output: Job description"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Job Family Modeling",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Mengelompokkan jabatan berdasarkan kesamaan karakteristik pekerjaan dan jalur karier",
+      "Output: Job family dan sub-job family model"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Competency Management",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun kamus kompetensi teknis, persyaratan kompetensi jabatan, dan proficiency level",
+      "Output: Technical competency dictionary"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Learning Architecture",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun learning pathway, kurikulum, modul, dan program pengembangan",
+      "Output: Learning pathway dan curriculum"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Job Evaluation",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menilai bobot dan relativitas jabatan serta mendukung penyusunan grading",
+      "Output: Kajian job grading"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Performance Management",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun KPI individu, mekanisme cascading, monitoring, review, dan evaluasi kinerja",
+      "Output: Individual performance management system"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Career Management",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun jalur karier, pola pergerakan, persyaratan promosi, dan succession criteria",
+      "Output: Career path dan career management framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Culture Management",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menilai kondisi budaya, merumuskan budaya target, dan menyusun program internalisasi",
+      "Output: Culture framework dan culture activation plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "HR Policy & SOP",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun dan menyempurnakan kebijakan, pedoman, prosedur, formulir, dan governance HR",
+      "Output: HR policy, SOP, dan pedoman pelaksanaan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "hr",
+    "areaName": "Human Capital Management",
+    "badge": "HR",
+    "title": "Change Management",
+    "scope": "Berfokus pada penyelarasan organisasi pekerjaan kompetensi kinerja budaya dan sistem pengelolaan SDM.",
+    "features": [
+      "Aktivitas: Menyusun strategi komunikasi, stakeholder engagement, dan kesiapan perubahan",
+      "Output: Change management plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Bookkeeping",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mencatat dan mengklasifikasikan transaksi keuangan secara sistematis",
+      "Output: Buku besar dan catatan transaksi"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Financial Statement Compilation",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mengompilasi laporan laba rugi, posisi keuangan, arus kas, dan perubahan ekuitas",
+      "Output: Laporan keuangan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Financial Reporting Assistance",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mendampingi rekonsiliasi, penyesuaian, dan penyelesaian laporan keuangan",
+      "Output: Financial reporting package"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Management Accounting",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Menyediakan informasi keuangan untuk perencanaan dan pengambilan keputusan manajemen",
+      "Output: Management report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Budgeting & Forecasting",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Menyusun anggaran, proyeksi keuangan, analisis skenario, dan pemantauan realisasi",
+      "Output: Budget dan financial forecast"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Financial Health Assessment",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Menilai profitabilitas, likuiditas, solvabilitas, arus kas, dan keberlanjutan keuangan",
+      "Output: Financial health assessment"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Cost & Profitability Analysis",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Menganalisis struktur biaya, cost driver, margin, unit economics, dan profitabilitas",
+      "Output: Cost and profitability analysis"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Taxation",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mendukung perhitungan, administrasi, pelaporan, dan kepatuhan perpajakan",
+      "Output: Tax calculation dan tax report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Agreed-Upon Procedures",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Melaksanakan prosedur pemeriksaan tertentu sesuai ruang lingkup yang disepakati",
+      "Output: AUP factual findings report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Financial Control",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mengkaji mekanisme otorisasi, rekonsiliasi, dokumentasi, dan pengendalian transaksi",
+      "Output: Internal financial control recommendation"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Corporate Governance",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Mengkaji dan menyusun laporan penerapan tata kelola perusahaan",
+      "Output: GCG assessment dan GCG report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "finance",
+    "areaName": "Finance",
+    "badge": "Finance",
+    "title": "Financial Advisory",
+    "scope": "Berfokus pada kualitas informasi keuangan pengendalian kepatuhan pengelolaan biaya dan dukungan keputusan bisnis.",
+    "features": [
+      "Aktivitas: Memberikan analisis dan rekomendasi keuangan untuk mendukung keputusan manajemen",
+      "Output: Financial advisory report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Operating Model Review",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengkaji struktur pelaksanaan operasi, alur keputusan, kapasitas, sumber daya, dan mekanisme koordinasi",
+      "Output: Operating model recommendation"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Operations Management",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Merancang dan memperbaiki sistem perencanaan, pelaksanaan, pengendalian, dan evaluasi operasi",
+      "Output: Operations management framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Process Mapping",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Memetakan alur kerja, aktivitas, input-output, handoff, dan titik kendali proses",
+      "Output: Process map dan workflow"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "SOP Development",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Menyusun, memperbarui, dan mengimplementasikan SOP operasional",
+      "Output: SOP dan implementation guideline"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Operational KPI",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Menetapkan indikator produktivitas, kualitas, waktu, biaya, utilisasi, dan tingkat layanan",
+      "Output: Operational KPI framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Productivity Review",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengukur produktivitas tenaga kerja, proses, aset, dan sumber daya operasional",
+      "Output: Productivity assessment"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Workload & Manpower Review",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Menganalisis beban kerja, kebutuhan tenaga kerja, utilisasi, dan kapasitas organisasi",
+      "Output: Workload analysis dan manpower planning"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Cost Control",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengidentifikasi cost driver, pemborosan, dan peluang efisiensi operasional",
+      "Output: Operational cost improvement plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Bottleneck Analysis",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengidentifikasi hambatan, antrean, duplikasi, rework, dan aktivitas yang tidak memberikan nilai tambah",
+      "Output: Bottleneck and root-cause analysis"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Process Improvement",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mendesain perbaikan alur kerja, simplifikasi proses, standardisasi, dan otomasi",
+      "Output: Process improvement roadmap"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Service & Quality Improvement",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengembangkan standar mutu, tingkat layanan, quality control, dan continuous improvement",
+      "Output: Service standard dan quality improvement plan"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Business Incubation",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mendampingi pengembangan usaha baru dari tahap konsep hingga kesiapan operasional",
+      "Output: Business incubation roadmap"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "SME Development",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mendampingi penguatan tata kelola, proses, kapasitas, dan kinerja UMKM",
+      "Output: SME development program"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Implementation Guidance",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mendampingi implementasi, monitoring progres, penyelesaian kendala, dan stabilisasi proses baru",
+      "Output: Implementation report dan corrective action"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "operations",
+    "areaName": "Operations Management & Process Improvement",
+    "badge": "Operations",
+    "title": "Operational Leadership",
+    "scope": "Berfokus pada peningkatan produktivitas kualitas efisiensi proses kapasitas dan efektivitas pelaksanaan operasional.",
+    "features": [
+      "Aktivitas: Mengembangkan mekanisme koordinasi, pengendalian, dan pengambilan keputusan tim operasional",
+      "Output: Team operating rhythm dan governance"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Data Governance",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Menetapkan kepemilikan, standar, akses, kualitas, keamanan, dan siklus hidup data",
+      "Output: Data governance framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Data Cleansing",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Membersihkan data kosong, duplikasi, inkonsistensi, kesalahan format, dan anomali",
+      "Output: Clean dataset"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Data Validation & Integration",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Memvalidasi dan mengintegrasikan data dari berbagai sistem atau sumber",
+      "Output: Integrated database"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Descriptive Analytics",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Menganalisis tren, profil, pola, dan kondisi kinerja historis",
+      "Output: Descriptive analysis report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Business & Behavioral Analytics",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Menganalisis perilaku pelanggan, pegawai, transaksi, dan penggerak kinerja bisnis",
+      "Output: Business and behavioral insights"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Predictive Analytics",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan model prediksi, forecasting, segmentasi, dan machine learning",
+      "Output: Predictive model dan forecast"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Strategic Insights",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Menerjemahkan hasil analisis menjadi rekomendasi bisnis yang dapat ditindaklanjuti",
+      "Output: Insight and recommendation report"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Dashboard Development",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan dashboard interaktif untuk monitoring KPI dan pengambilan keputusan",
+      "Output: Interactive dashboard"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Data Visualization",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Merancang visualisasi, UI/UX, dan dynamic reporting yang mudah digunakan",
+      "Output: Data visualization dan reporting interface"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "POS & Transaction System",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan sistem transaksi, penjualan, pembayaran, dan pencatatan operasional",
+      "Output: POS and transaction system"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Inventory Management System",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan sistem persediaan, mutasi stok, reorder, dan monitoring inventori",
+      "Output: Inventory management system"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Database & Synchronization",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan basis data cloud/lokal, integrasi API, dan sinkronisasi data secara real-time",
+      "Output: Database and integration architecture"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Information Security",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan kontrol akses, backup, recovery, keamanan data, dan audit trail",
+      "Output: Security and access control framework"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Executive Analytics Portal",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan portal manajemen dan aplikasi bisnis yang disesuaikan dengan kebutuhan organisasi",
+      "Output: Executive portal dan custom application"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Web Development",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengembangkan website responsif, landing page, dan integrasi dengan sistem bisnis",
+      "Output: Responsive website"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "System Maintenance",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Memantau performa, memperbaiki gangguan, melakukan pembaruan, dan menjaga stabilitas sistem",
+      "Output: Maintenance report dan service support"
+    ],
+    "highlight": false
+  },
+  {
+    "areaKey": "data",
+    "areaName": "Data",
+    "badge": "Data & IT",
+    "title": "Data Management Services",
+    "scope": "Berfokus pada pengelolaan data analitik pengembangan sistem keamanan dan solusi digital yang mendukung keputusan serta operasi bisnis.",
+    "features": [
+      "Aktivitas: Mengelola pembaruan, penyimpanan, kualitas, dan ketersediaan data secara berkelanjutan",
+      "Output: Managed data services"
+    ],
+    "highlight": false
+  }
+]
