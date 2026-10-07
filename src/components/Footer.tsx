@@ -71,7 +71,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                   <span className="text-xs font-medium text-foreground">Kantor Operasional</span>
                   <span className="text-sm text-muted-foreground">
-                    Purwokerto, Jawa Tengah<br />Indonesia
+                    Perumahan Graha Timur, Purwokerto Timur, Kabupaten Banyumas, Jawa Tengah<br />Indonesia
                   </span>
                 </div>
               </li>
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>&copy; {currentYear} JP &amp; PARTNERS. Hak cipta dilindungi.</p>
+          <p>&copy; {currentYear} JP &amp; CO. Hak cipta dilindungi.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Syarat &amp; Ketentuan</a>
             <a href="#" className="hover:text-foreground transition-colors">Kebijakan Privasi</a>

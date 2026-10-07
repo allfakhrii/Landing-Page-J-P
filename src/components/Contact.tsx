@@ -107,7 +107,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground">Kantor Operasional</h4>
-                  <p className="text-muted-foreground mt-1">Purwokerto, Jawa Tengah, Indonesia</p>
+                  <p className="text-muted-foreground mt-1">Perumahan Graha Timur, Purwokerto Timur, Kabupaten Banyumas, Jawa Tengah, Indonesia</p>
                 </div>
               </div>
             </div>

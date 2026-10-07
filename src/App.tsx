@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import HowWeWork from './components/HowWeWork';
 import Team from './components/Team';
 import Pricing from './components/Pricing';
@@ -42,7 +41,6 @@ function App() {
           <Navbar scrolled={scrolled} />
           <main className="flex-1">
             <Hero />
-            <Services />
             <HowWeWork />
             <Team />
             <Pricing />

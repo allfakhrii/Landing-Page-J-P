@@ -24,7 +24,7 @@ export default function Pricing() {
   }, [filter]);
 
   return (
-    <section id="pricing" className="py-24 border-t border-border bg-transparent">
+    <section id="services" className="py-24 border-t border-border bg-transparent">
       <AnimatedSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="outline" className="mb-4">LAYANAN & PAKET</Badge>

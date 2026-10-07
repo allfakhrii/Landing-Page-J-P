@@ -1,8 +1,7 @@
 export const NAV_LINKS = [
-  { name: "Layanan", href: "#services" },
   { name: "Cara Kerja", href: "#how-we-work" },
   { name: "Tim Spesialis", href: "#team" },
-  { name: "Paket Layanan", href: "#pricing" },
+  { name: "Katalog Layanan", href: "#services" },
 ];
 
 export const SERVICES_DATA = [
