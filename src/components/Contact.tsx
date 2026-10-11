@@ -123,18 +123,18 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Nama Lengkap *</label>
-                    <Input name="name" value={formData.name} onChange={handleChange} required placeholder="Budi Santoso" />
+                    <Input name="name" value={formData.name} onChange={handleChange} required/>
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Perusahaan / Bisnis</label>
-                    <Input name="company" value={formData.company} onChange={handleChange} placeholder="PT Sukses Makmur" />
+                    <Input name="company" value={formData.company} onChange={handleChange}/>
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">WhatsApp / Telepon *</label>
-                    <Input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="0812xxxxxx" />
+                    <Input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Minat Layanan</label>
@@ -160,7 +160,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Ceritakan Tantangan Anda *</label>
+                  <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Cerita kan Tantangan Anda *</label>
                   <Textarea name="message" value={formData.message} onChange={handleChange} required placeholder="Kami sedang mengalami kendala dalam..." className="min-h-[120px] resize-none" />
                 </div>
                 
