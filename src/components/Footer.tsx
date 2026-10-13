@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand & Intro */}
           <div className="col-span-1 md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="JP & PARTNERS Logo" className="h-12 w-auto object-contain" />
+              <img src={logo} alt="JP & Co. Logo" className="h-12 w-auto object-contain" />
               <span className="font-serif font-bold text-xl tracking-wider text-foreground">JP &amp; Co.</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">

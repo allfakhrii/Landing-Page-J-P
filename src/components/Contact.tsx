@@ -58,7 +58,7 @@ export default function Contact() {
   const getWhatsAppLink = () => {
     const phone = "6281919011011";
     const text = encodeURIComponent(
-      `Halo JP & Partners, perkenalkan saya ${formData.name || "[Nama]"}${formData.company ? ` dari ${formData.company}` : ""}. Saya ingin berdiskusi mengenai layanan ${formData.service || "Konsultasi Bisnis"}.\n\nCatatan kebutuhan: ${formData.message || "-"}`
+      `Halo JP & Co, perkenalkan saya ${formData.name || "[Nama]"}${formData.company ? ` dari ${formData.company}` : ""}. Saya ingin berdiskusi mengenai layanan ${formData.service || "Konsultasi Bisnis"}.\n\nCatatan kebutuhan: ${formData.message || "-"}`
     );
     return `https://wa.me/${phone}?text=${text}`;
   };

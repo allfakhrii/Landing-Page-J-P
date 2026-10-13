@@ -38,7 +38,7 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
         >
           <div className="flex items-center justify-between w-full">
             <a href="#" className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full px-1">
-              <img src={logo} alt="JP & PARTNERS Logo" className="h-8 w-auto sm:h-9 object-contain" />
+              <img src={logo} alt="JP & Co. Logo" className="h-8 w-auto sm:h-9 object-contain" />
               <span className="font-serif font-bold text-sm sm:text-base tracking-wider text-foreground">JP &amp; Co.</span>
             </a>
             
@@ -96,7 +96,7 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
           <div className="relative mt-3 mx-3 p-5 rounded-[28px] shadow-2xl border border-border/50 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-[24px] backdrop-saturate-[1.8] animate-in slide-in-from-top-8 fade-in duration-300 ease-out">
             <div className="flex items-center justify-between pb-3 border-b border-border">
               <div className="flex items-center gap-2.5">
-                <img src={logo} alt="JP & PARTNERS Logo" className="h-10 w-auto object-contain" />
+                <img src={logo} alt="JP & Co. Logo" className="h-10 w-auto object-contain" />
                 <span className="font-serif font-bold text-base tracking-wider text-foreground">JP &amp; Co.</span>
               </div>
               <button 
