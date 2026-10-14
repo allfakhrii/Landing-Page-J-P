@@ -84,6 +84,8 @@ export default function Team() {
                         <img 
                           src={member.photo} 
                           alt={member.name} 
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover z-10"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
