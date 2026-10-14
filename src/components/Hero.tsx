@@ -31,7 +31,13 @@ export default function Hero() {
           <a href="#services" className={buttonVariants({ variant: "outline", size: "lg", className: "rounded-full font-semibold px-8 h-12 w-full sm:w-auto transition-all hover:-translate-y-1" })}>
             Pelajari Layanan
           </a>
-          <a href="#" download className={buttonVariants({ variant: "secondary", size: "lg", className: "rounded-full font-semibold px-8 h-12 w-full sm:w-auto flex items-center gap-2 transition-all hover:-translate-y-1 group" })}>
+          <a 
+            href="/JP&CO.pdf" 
+            download="JP&CO.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={buttonVariants({ variant: "secondary", size: "lg", className: "rounded-full font-semibold px-8 h-12 w-full sm:w-auto flex items-center gap-2 transition-all hover:-translate-y-1 group" })}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-y-1 group-hover:text-primary transition-transform">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
